@@ -1,6 +1,6 @@
-class CreateEventGroups < ActiveRecord::Migration
+class CreateGroups < ActiveRecord::Migration
   def change
-    create_table :event_groups do |t|
+    create_table :groups do |t|
       t.string :name
       t.integer :creator_id
       t.text :group_description

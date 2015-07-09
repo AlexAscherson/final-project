@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
 
-EventGroup.delete_all
+Group.delete_all
 
 # ...........................
 
@@ -19,22 +19,26 @@ user3 = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com'
 
 # ...........................
 
-eg1 = EventGroup.create!(
+eg1 = Group.create!(
   name: 'Alexs Awesome Group',
   group_description: 'This is the description',
-  creator_id: 1
+  creator_id: 1,
+  # user_id: [1, 2, 3]
       )
 
-eg2 = EventGroup.create!(
+eg2 = Group.create!(
   name: 'Harrys Awesome Group',
   group_description: 'This is the description',
   creator_id: 1
       )
 
-eg3 = EventGroup.create!(
+eg3 = Group.create!(
   name: 'Zoes Awesome Group',
   group_description: 'This is the description',
   creator_id: 1
       )
+
+eg1.user_id << '1' << '2' << '3'
+eg1.save
 
 # .....................
