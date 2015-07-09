@@ -23,8 +23,14 @@
 <p>
   <strong>Users:</strong>
   <%= @group.user_id %>
-  <% binding.pry %>
 </p>
+
+<h3>Group users:</h3>
+  <ul>
+    <% @group.user_id.each do | nom | %>
+      <li><%= User.find(nom).name %> </li>
+    <% end %>
+  </ul>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

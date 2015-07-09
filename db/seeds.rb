@@ -9,36 +9,54 @@ User.delete_all
 
 Group.delete_all
 
-# ...........................
+Tournament.delete_all
 
-user1 = User.create! :name => 'Alex', :bio => 'My Bio',  :email => 'alex@gmail.com', :password => 'password', :password_confirmation => 'password'
-user2 = User.create! :name => 'Harry', :bio => 'My Bio', :email => 'harry@gmail.com', :password => 'password', :password_confirmation => 'password'
-user3 = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com', :password => 'password', :password_confirmation => 'password'
-
+Event.delete_all
 
 
 # ...........................
 
-eg1 = Group.create!(
+alex = User.create! :name => 'Alex', :bio => 'My Bio',  :email => 'alex@gmail.com', :password => 'password', :password_confirmation => 'password'
+harry = User.create! :name => 'Harry', :bio => 'My Bio', :email => 'harry@gmail.com', :password => 'password', :password_confirmation => 'password'
+zoe = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com', :password => 'password', :password_confirmation => 'password'
+
+
+
+# ...........................
+
+alexsgroup = Group.create!(
   name: 'Alexs Awesome Group',
   group_description: 'This is the description',
   creator_id: 1,
-  # user_id: [1, 2, 3]
+  user_id: [1, 2, 3,]
       )
 
-eg2 = Group.create!(
+
+harrysgroup = Group.create!(
   name: 'Harrys Awesome Group',
   group_description: 'This is the description',
-  creator_id: 1
+  creator_id: 2,
+  user_id: [1, 2, 3]
       )
 
-eg3 = Group.create!(
+zoesgroup = Group.create!(
   name: 'Zoes Awesome Group',
   group_description: 'This is the description',
-  creator_id: 1
+  creator_id: 3,
+  user_id: [2, 3]
       )
 
-eg1.user_id << '1' << '2' << '3'
-eg1.save
+
+alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends beta test', :tournament_description => 'This is an alpha test really', :group_id => 1, :user_id => [1, 2, 3]
+
+alstournyround1 = Event.create! :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'First round!  Gonna be great', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>Camden, :outcome: 5
+alstournyround2 = Event.create! :host_id => 2, :name => 'Dinner at Harrys house', :event_description => 'Harry house.  Its the same as mine...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>Camden, :outcome: 5
+alstournyround3 =Event.create! :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Final at zoes...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>West London, :outcome: 7
+
+
+alex.group_id << 1 << 2 << 3
+# Group id = what groups you are in - Wait is this redundant?
+alex.save
+
 
 # .....................

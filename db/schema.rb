@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150709174557) do
+ActiveRecord::Schema.define(version: 20150709192244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,22 @@ ActiveRecord::Schema.define(version: 20150709174557) do
     t.integer  "creator_id"
     t.text     "group_description"
     t.string   "imageurl"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "host_id"
+    t.text     "event_description"
+    t.string   "imageurl"
+    t.text     "user_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "group_id"
+    t.text     "tournament_id"
+    t.string   "location"
+    t.integer  "outcome"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
@@ -41,6 +57,19 @@ ActiveRecord::Schema.define(version: 20150709174557) do
   end
 
   add_index "groups_users", ["group_id", "user_id"], name: "index_groups_users_on_group_id_and_user_id", using: :btree
+
+  create_table "tournaments", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "creator_id"
+    t.string   "imageurl"
+    t.text     "user_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "group_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.text     "tournament_description"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
