@@ -1,12 +1,16 @@
+<div class="contentwrap">
+
 <p id="notice"><%= notice %></p>
 
+
+<div class="groupheader">
 <p>
   <strong>Name:</strong>
   <%= @group.name %>
 </p>
 
 <p>
-  <strong>Creator:</strong>
+  <strong>Owner/Admin:</strong>
   <%= @group.creator_id %>
 </p>
 
@@ -25,12 +29,55 @@
   <%= @group.user_id %>
 </p>
 
+ </div>
+
+ <div class="groupmembers">
 <h3>Group users:</h3>
   <ul>
+
     <% @group.user_id.each do | nom | %>
       <li><%= User.find(nom).name %> </li>
     <% end %>
   </ul>
+</div>
+
+<div class="grouptournaments">
+<h3>Group Tournaments:</h3>
+
+  <% @group.tournaments.each do | tournament | %>
+      <li>Name:<%= tournament.name %> </li>
+      <li>Desc:<%= tournament.tournament_description %> </li>
+      Tournament Events:
+      <% tournament.events.each do | event | %>
+      <div class="eventlink">
+      <li><%= link_to content_tag(:span, event.name), group_tournament_event_path(@group, tournament, event) %> </li>
+
+      </div>
+      <% end %> 
+    <% end %>
+  </ul>
+
+  </div>
+
+  <% @group.tournaments.each do |tournament| %>
+        <li>
+          <%= image_tag(tournament.imageurl, :alt => "rss feed") %>
+          <!-- <td><%= tournament.imageurl %></td> -->
+          <h3><%= tournament.name %></td>
+          <!-- <td><%= tournament.creator_id %></td> -->
+          <p><%= tournament.tournament_description %></p>
+          
+          <%= link_to 'Show', group_tournament_path(@group, tournament) %>
+          <%= link_to 'Edit', edit_group_tournament_path(@group, tournament) %>
+          <%= link_to 'Destroy', group_tournament_path(@group, tournament), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+       
+      <% end %>
+
+
+
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
+
+</div>

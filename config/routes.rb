@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  resources :events
-  resources :tournaments
-  resources :groups
+
   devise_for :users
 
+  resources :groups do 
+    resources :tournaments do
+      resources :events
+    end
+  end
 
-   root 'pages#homepage'
+   root 'groups#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -5,11 +5,15 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @group = Group.find(params['group_id'])
+    @tournament = Tournament.find(params['tournament_id'])
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
+    @group = Group.find(params['group_id'])
+    @tournament = Tournament.find(params['tournament_id'])
   end
 
   # GET /events/new
@@ -19,6 +23,8 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+     @group = Group.find(params['group_id'])
+    @tournament = Tournament.find(params['tournament_id'])
   end
 
   # POST /events

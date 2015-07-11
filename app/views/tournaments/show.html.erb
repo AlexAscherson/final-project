@@ -39,6 +39,6 @@
   <strong>Group:</strong>
   <%= @tournament.group_id %>
 </p>
+<li> <%= link_to('Edit', edit_group_tournament_path(@group, @tournament)) %> </li>
+  <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
 
-<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
-<%= link_to 'Back', tournaments_path %>

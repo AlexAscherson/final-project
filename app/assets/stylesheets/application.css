@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+#bodywrap {
+  text-align: center;
+    display: block;
+    float: middle;
+    text-align: center;
+    margin: 0 auto;
+
+ }
+
+ .eventlink {
+  position: relative;
+ }
+
+ .eventlink span {
+width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;
+ }

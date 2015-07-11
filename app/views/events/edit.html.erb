@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<td><%= link_to 'Show', group_tournament_event_path(@group, @tournament, @event) %></td> |
+<%= link_to 'Back', group_tournament_events_path %>

@@ -55,5 +55,8 @@
   <%= @event.outcome %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+
+<td><%= link_to 'Edit', edit_group_tournament_event_path(@group, @tournament, @event) %></td>
+
+<td><%= link_to 'Destroy', group_tournament_event_path(@group, @tournament, @event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+

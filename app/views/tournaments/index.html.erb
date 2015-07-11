@@ -19,6 +19,7 @@
 
   <tbody>
     <% @tournaments.each do |tournament| %>
+
       <tr>
         <td><%= tournament.name %></td>
         <td><%= tournament.creator_id %></td>
@@ -28,9 +29,9 @@
         <td><%= tournament.start_date %></td>
         <td><%= tournament.end_date %></td>
         <td><%= tournament.group_id %></td>
-        <td><%= link_to 'Show', tournament %></td>
-        <td><%= link_to 'Edit', edit_tournament_path(tournament) %></td>
-        <td><%= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', group_tournament_path(@group, tournament) %></td>
+        <td><%= link_to 'Edit', edit_group_tournament_path(@group, tournament) %></td>
+        <td><%= link_to 'Destroy', group_tournament_path(@group, tournament), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Tournament', new_tournament_path %>
+<%= link_to 'New Tournament', new_group_tournament_path %>

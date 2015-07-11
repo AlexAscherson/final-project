@@ -1,0 +1,9 @@
+Questions for TAS 
+
+- Should make a controller and pages folder to hold the individual pages?
+Better to make pages again from scratch than use the scaffold show etc.
+
+Nesting - Have correctly nested these?  Should nest urls
+
+Best way to pass info between models?
+

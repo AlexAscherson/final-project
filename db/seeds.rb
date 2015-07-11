@@ -14,7 +14,7 @@ Tournament.delete_all
 Event.delete_all
 
 
-# ...........................
+# ..........Users.................
 
 alex = User.create! :name => 'Alex', :bio => 'My Bio',  :email => 'alex@gmail.com', :password => 'password', :password_confirmation => 'password'
 harry = User.create! :name => 'Harry', :bio => 'My Bio', :email => 'harry@gmail.com', :password => 'password', :password_confirmation => 'password'
@@ -22,13 +22,14 @@ zoe = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com', 
 
 
 
-# ...........................
+# ...........Groups................
 
 alexsgroup = Group.create!(
   name: 'Alexs Awesome Group',
   group_description: 'This is the description',
   creator_id: 1,
-  user_id: [1, 2, 3,]
+  user_id: [1, 2, 3,],
+  imageurl: "http://lorempixum.com/100/100/nature/1"
       )
 
 
@@ -36,22 +37,28 @@ harrysgroup = Group.create!(
   name: 'Harrys Awesome Group',
   group_description: 'This is the description',
   creator_id: 2,
-  user_id: [1, 2, 3]
+  user_id: [1, 2, 3],
+  imageurl: "http://lorempixum.com/100/100/nature/2"
+
       )
 
 zoesgroup = Group.create!(
   name: 'Zoes Awesome Group',
   group_description: 'This is the description',
   creator_id: 3,
-  user_id: [2, 3]
+  user_id: [2, 3],
+  imageurl: "http://lorempixum.com/100/100/nature/3"
+
       )
 
+# ........Tournaments ............
 
 alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends beta test', :tournament_description => 'This is an alpha test really', :group_id => 1, :user_id => [1, 2, 3]
 
-alstournyround1 = Event.create! :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'First round!  Gonna be great', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>Camden, :outcome: 5
-alstournyround2 = Event.create! :host_id => 2, :name => 'Dinner at Harrys house', :event_description => 'Harry house.  Its the same as mine...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>Camden, :outcome: 5
-alstournyround3 =Event.create! :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Final at zoes...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>West London, :outcome: 7
+# ........EVENTS...........
+alstournyround1 = Event.create! :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'First round!  Gonna be great', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'Camden', :outcome => 5
+alstournyround2 = Event.create! :host_id => 2, :name => 'Dinner at Harrys house', :event_description => 'Harry house.  Its the same as mine...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'Camden', :outcome => 5
+alstournyround3 =Event.create! :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Final at zoes...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'West London', :outcome => 7
 
 
 alex.group_id << 1 << 2 << 3

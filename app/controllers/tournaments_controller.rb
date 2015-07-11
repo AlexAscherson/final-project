@@ -4,21 +4,27 @@ class TournamentsController < ApplicationController
   # GET /tournaments
   # GET /tournaments.json
   def index
+    @group = Group.find(params['group_id'])
     @tournaments = Tournament.all
   end
 
   # GET /tournaments/1
   # GET /tournaments/1.json
   def show
+        @group = Group.find(params['group_id'])
+
   end
 
   # GET /tournaments/new
   def new
     @tournament = Tournament.new
+    @group = Group.find(params['group_id'])
   end
 
   # GET /tournaments/1/edit
   def edit
+        @group = Group.find(params['group_id'])
+
   end
 
   # POST /tournaments
