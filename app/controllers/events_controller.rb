@@ -23,7 +23,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
-     @group = Group.find(params['group_id'])
+    @group = Group.find(params['group_id'])
     @tournament = Tournament.find(params['tournament_id'])
   end
 
@@ -46,9 +46,11 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
+    @group = Group.find(params['group_id'])
+    @tournament = Tournament.find(params['tournament_id'])
     respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+      if @event.update(event_params) 
+        format.html { redirect_to group_tournament_event_path(@group, @tournament, @event), notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }

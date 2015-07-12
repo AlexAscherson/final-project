@@ -1,32 +1,58 @@
-<div class ="contentwrap">
+<p id="notice"><%= notice %></p>
 
-  <p id="notice"><%= notice %></p>
-
-  <h1>Listing Groups</h1>
-
-  <div>
-  <ul>
-
-    <% @groups.each do |group| %>
-        <li>
-          <%= image_tag(group.imageurl, :alt => "rss feed") %>
-          <!-- <td><%= group.imageurl %></td> -->
-          <h3><%= group.name %></td>
-          <!-- <td><%= group.creator_id %></td> -->
-          <p><%= group.group_description %></p>
-          
-          <%= link_to 'Show', group %>
-          <%= link_to 'Edit', edit_group_path(group) %>
-          <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </li>
-      <% end %>
+<div class="top">
+  <div class="toptext">
+    <p>Dine With Friends </p>
     
-  </ul>
+    <p>The Dining App for the Socially Competitive</p>
+ 
+
+  <div class="createnew">Create A New Group</div>
+
+  <p>..Or join an existing group.</p>
+
+  </div>
+
+   </div>
+
+
+<div class="mid1">
+<div class="mid1text">
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+ </div>
+
+
+
+<div class="groupshome">
+
+
+  <h1>Latest Groups</h1>
+
+    <div class="grouplist">
+    <ul>
+
+      <% @groups.each do |group| %>
+          <li>
+
+            <%= image_tag(group.imageurl, :alt => "rss feed", :class => "group_thumb") %>
+            <!-- <td><%= group.imageurl %></td> -->
+            <h3><%= group.name %></td>
+            <!-- <td><%= group.creator_id %></td> -->
+            <p><%= group.group_description %></p>
+            
+            <%= link_to 'Show', group %>
+            <%= link_to 'Edit', edit_group_path(group) %>
+            <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </li>
+        <% end %>
+      
+    </ul>
+  </div>
+
 </div>
 
-
-
-      
+<div class ="contentwrap">
 
 
 

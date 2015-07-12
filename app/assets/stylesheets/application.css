@@ -15,12 +15,30 @@
  */
 
 #bodywrap {
-  text-align: center;
+  
     display: block;
-    float: middle;
+    background-color: #d6f1ec;
     text-align: center;
     margin: 0 auto;
+    /*width: 60%;*/
+    border: 2px solid black;
 
+ }
+
+ .contentwrap{
+  background-color: #d6f1ec;
+
+ }
+
+ #bodywrap div{
+    margin-top: 0px;
+ }
+
+  
+
+ .topimage img{
+  width:600px;
+  height: 200px;
  }
 
  .eventlink {
@@ -35,3 +53,52 @@ z-index:2;
 top:0px;
 left:0px;
  }
+
+/*.navwrap {
+  text-align: center;
+  margin: 0 auto;
+
+}*/
+
+.clear {
+  clear:both;
+}
+
+.navwrap{
+  height: 150%;
+  background-color: black;
+  margin: 0px;
+
+  
+
+}
+
+.navlinks {
+  clear:both;
+}
+
+.navcontent{
+  height: 150%;
+  color: white;
+  font-family: futura;
+  font-size: 25px;
+  padding-top: 20px !important;
+  padding-bottom: 10px;
+  text-align: left;
+
+}
+
+.navcontent a{
+  color: white;
+
+}
+
+
+.nav1{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+

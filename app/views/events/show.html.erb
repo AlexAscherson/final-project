@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+<p class="topimage">
+  <%= image_tag(@event.imageurl) %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @event.name %>
@@ -13,11 +18,6 @@
 <p>
   <strong>Event description:</strong>
   <%= @event.event_description %>
-</p>
-
-<p>
-  <strong>Imageurl:</strong>
-  <%= @event.imageurl %>
 </p>
 
 <p>

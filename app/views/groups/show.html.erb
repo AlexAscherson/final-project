@@ -1,83 +1,141 @@
+<style media="screen">
+  .group_show_top { background-image: url(<%= @group.imageurl %>); }
+</style>
+
+<div class="group_show_top">
+  <div class="group_show_top_text">
+    <p>
+      <strong>Name:</strong>
+      <%= @group.name %>
+
+    </p>
+    <p><%= @group.group_description %></p>
+    <p>NEXT EVENT:<p>
+    </div>
+
+    <div class="tournamentsbar">
+      <p>1</p>
+      <p>1</p>
+      <p>1</p>
+      <p>1</p>
+
+      <div class="group_members_top">
+      <h3>Group users:</h3>
+        <ul>
+          <% @group.user_id.each do | user | %>
+            <li><%= User.find(user).name %> </li>
+            <li><%= User.find(user).name %> </li>
+          <% end %>
+        </ul>
+      </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+
 <div class="contentwrap">
 
 <p id="notice"><%= notice %></p>
 
 
+
+
+
 <div class="groupheader">
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
 
-<p>
-  <strong>Owner/Admin:</strong>
-  <%= @group.creator_id %>
-</p>
 
-<p>
-  <strong>Group description:</strong>
-  <%= @group.group_description %>
-</p>
 
-<p>
-  <strong>Imageurl:</strong>
-  <%= @group.imageurl %>
-</p>
-
-<p>
-  <strong>Users:</strong>
-  <%= @group.user_id %>
-</p>
-
- </div>
-
- <div class="groupmembers">
-<h3>Group users:</h3>
-  <ul>
-
-    <% @group.user_id.each do | nom | %>
-      <li><%= User.find(nom).name %> </li>
-    <% end %>
-  </ul>
-</div>
-
-<div class="grouptournaments">
-<h3>Group Tournaments:</h3>
-
-  <% @group.tournaments.each do | tournament | %>
-      <li>Name:<%= tournament.name %> </li>
-      <li>Desc:<%= tournament.tournament_description %> </li>
-      Tournament Events:
-      <% tournament.events.each do | event | %>
-      <div class="eventlink">
-      <li><%= link_to content_tag(:span, event.name), group_tournament_event_path(@group, tournament, event) %> </li>
-
-      </div>
-      <% end %> 
-    <% end %>
-  </ul>
+  <!-- <p class="topimage">
+    <%= image_tag(@group.imageurl) %>
+  </p> -->
 
   </div>
 
-  <% @group.tournaments.each do |tournament| %>
-        <li>
-          <%= image_tag(tournament.imageurl, :alt => "rss feed") %>
-          <!-- <td><%= tournament.imageurl %></td> -->
-          <h3><%= tournament.name %></td>
-          <!-- <td><%= tournament.creator_id %></td> -->
-          <p><%= tournament.tournament_description %></p>
-          
-          <%= link_to 'Show', group_tournament_path(@group, tournament) %>
-          <%= link_to 'Edit', edit_group_tournament_path(@group, tournament) %>
-          <%= link_to 'Destroy', group_tournament_path(@group, tournament), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </li>
-       
-      <% end %>
+  <div class="body">
+
+
+  <div class="column1">
+
+   <div class="groupmembers">
+    <h3>Group users:</h3>
+      <ul>
+
+        <% @group.user_id.each do | nom | %>
+          <li><%= User.find(nom).name %> </li>
+        <% end %>
+      </ul>
+  </div>
+
+  </div>
+
+  <div class="column2">
+  <p>
+    <strong>Name:</strong>
+    <%= @group.name %>
+  </p>
+
+  <p>
+    <strong>Owner/Admin:</strong>
+    <%= @group.creator_id %>
+  </p>
+
+  <p>
+    <strong>Group description:</strong>
+    <%= @group.group_description %>
+  </p>
+     
+
+  <p>
+    <strong>Users:</strong>
+    <%= @group.user_id %>
+  </p>
+
+   </div>
+
+  
+
+  <div class="grouptournaments">
+    <h3>Group Tournaments:</h3>
+
+      <% @group.tournaments.each do | tournament | %>
+          <li>Name:<%= tournament.name %> </li>
+          <li>Desc:<%= tournament.tournament_description %> </li>
+          Tournament Events:
+          <% tournament.events.each do | event | %>
+          <div class="eventlink">
+          <li><%= link_to content_tag(:span, event.name), group_tournament_event_path(@group, tournament, event) %> </li>
+
+          </div>
+          <% end %> 
+        <% end %>
+      </ul>
+
+    </div>
+
+    <% @group.tournaments.each do |tournament| %>
+          <li>
+            <%= image_tag(tournament.imageurl, :alt => "rss feed") %>
+            <!-- <td><%= tournament.imageurl %></td> -->
+            <h3><%= tournament.name %></h3></td>
+            <!-- <td><%= tournament.creator_id %></td> -->
+            <p><%= tournament.tournament_description %></p>
+            
+            <%= link_to 'Show', group_tournament_path(@group, tournament) %>
+            <%= link_to 'Edit', edit_group_tournament_path(@group, tournament) %>
+            <%= link_to 'Destroy', group_tournament_path(@group, tournament), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </li>
+         
+        <% end %>
 
 
 
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+  <%= link_to 'Edit', edit_group_path(@group) %> |
+  <%= link_to 'Back', groups_path %>
 
 </div>
+
+</div

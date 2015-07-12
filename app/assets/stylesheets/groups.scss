@@ -1,15 +1,105 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.top{
+  width:100%;
+  background: url(http://www.confessionsofachocoholic.com/wp-content/uploads/2012/09/chile-olive-oil-dinner-party2.jpg) no-repeat center center; 
+  margin: 0 0;
+  color: white;
 
+  background-size: cover;
+}
+
+
+
+
+.toptext{
+  padding-top: 15%;
+  padding-bottom: 15%;
+  margin-top: -35%;
+  text-align: left;
+  font-size: 200%;
+  font-family: futura;
+}
+
+
+.createnew{
+  background-color: #058496;
+  width: 25%;
+  padding: 10px;
+  margin-top: 20px !important;
+
+}
+
+.toptext p{
+  padding: 20px;
+  font-size: 50px;
+}
+
+.mid1{
+  width:100%;
+  margin: 0 0;
+  color: white;
+}
+
+.mid1text{
+  height: 300px;
+  // padding-top: 15%;
+  // padding-bottom: 15%;
+  // margin-top: -35%;
+  // text-align: left;
+  
+}
+
+.mid1text p{
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 25pt;
+  font-family: futura;
+  line-height: 1.5;
+
+
+}
+
+.groupshome{
+  width:100%;
+  background-color: white;
+  margin: 0px;
+
+}
 
 .contentwrap{
   text-align: center;
   display: block;
   float: middle;
   width:630px;
-  text-align: center;
   margin: 0 auto;
+  }
+
+  .group_thumb{
+    width: 100px;
+    height: 100px;
+  }
+  
+  // .body{
+  // -webkit-column-count: 2;
+  //    -moz-column-count: 2;
+  //         column-count: 2;
+  //       }
+
+  .column1{
+    width: 20%;
+    border: 1px solid black;
+    display: block;
+    // float: left;
+  }
+  .column2{
+    width: 70%;
+    border: 1px solid black;
+    display: inline block;
+
+
   }
 
   * {margin: 0; padding: 0;}
@@ -20,7 +110,7 @@ div {
  
 ul {
   list-style-type: none;
-  width: 500px;
+ 
 }
  
 h3 {
@@ -39,6 +129,7 @@ li p {
 li {
   padding: 10px;
   overflow: auto;
+  
 }
  
 li:hover {
@@ -46,4 +137,50 @@ li:hover {
   cursor: pointer;
 }
 
-  
+.groupshome{
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  color: black;
+  padding-top: 10px;
+}
+
+
+.grouplist{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding-top:10px;
+}
+
+.group_show_top{
+  width:100%;
+  background: no-repeat center center; 
+  margin: 0 0;
+  color: white;
+  background-size: cover;
+}
+
+.group_show_top_text{
+  padding-top: 15%;
+  padding-bottom: 15%;
+  margin-top: -35%;
+  text-align: left;
+  font-size: 200%;
+  font-family: futura;
+}
+
+.tournamentsbar{
+  width:100%;
+   
+  margin: 0 0;
+  background: rgb(54, 25, 25); /* Fall-back for browsers that don't
+                                    support rgba */
+  background: rgba(54, 25, 25, .5);
+  }
+
+  .group_members_top li{
+    display: inline;
+    list-style-type: none;
+  }
