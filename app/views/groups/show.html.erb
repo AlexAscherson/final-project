@@ -14,19 +14,14 @@
     </div>
 
     <div class="tournamentsbar">
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-      <p>1</p>
-
-      
-
+    
       <div class="group_members_top">
-      <h3>Group users:</h3>
         <ul>
           <% @group.user_id.each do | user | %>
-            <li><%= User.find(user).name %> </li>
-            <li><%= User.find(user).profile_image_url %> </li>
+            <li>
+            <% profileimg = User.find(user).profile_image_url %> 
+            <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> </li>
+
           <% end %>
         </ul>
       </div>
@@ -35,6 +30,25 @@
     </div>
 
 </div>
+
+
+<div class="grouptournaments">
+    <h3>Group Tournaments:</h3>
+
+      <% @group.tournaments.each do | tournament | %>
+          <li>Name:<%= tournament.name %> </li>
+          <li>Desc:<%= tournament.tournament_description %> </li>
+          Tournament Events:
+          <% tournament.events.each do | event | %>
+          <div class="eventlink">
+          <li><%= link_to content_tag(:span, event.name), group_tournament_event_path(@group, tournament, event) %> </li>
+
+          </div>
+          <% end %> 
+        <% end %>
+      </ul>
+
+    </div>
 
 
 
@@ -60,16 +74,6 @@
 
 
   <div class="column1">
-
-   <div class="groupmembers">
-    <h3>Group users:</h3>
-      <ul>
-
-        <% @group.user_id.each do | nom | %>
-          <li><%= User.find(nom).name %> </li>
-        <% end %>
-      </ul>
-  </div>
 
   </div>
 

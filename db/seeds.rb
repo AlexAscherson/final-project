@@ -16,9 +16,9 @@ Event.delete_all
 
 # ..........Users.................
 
-alex = User.create! :name => 'Alex', :bio => 'My Bio',  :email => 'alex@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"/assets/alex.jpg"
-harry = User.create! :name => 'Harry', :bio => 'My Bio', :email => 'harry@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"/assets/harry.jpg"
-zoe = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"/assets/zoe.jpg"
+alex = User.create! :name => 'Alex', :bio => 'My Bio',  :email => 'alex@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"alex.jpg"
+harry = User.create! :name => 'Harry', :bio => 'My Bio', :email => 'harry@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"harry.jpg"
+zoe = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"zoe.jpg"
 
 
 
@@ -29,7 +29,7 @@ alexsgroup = Group.create!(
   group_description: 'This is the description',
   creator_id: 1,
   user_id: [1, 2, 3,],
-  imageurl: "http://lorempixum.com/100/100/nature/1"
+  imageurl: "group1.jpg"
       )
 
 
@@ -38,7 +38,7 @@ harrysgroup = Group.create!(
   group_description: 'This is the description',
   creator_id: 2,
   user_id: [1, 2, 3],
-  imageurl: "http://lorempixum.com/100/100/nature/2"
+  imageurl: "group.jpg"
 
       )
 
@@ -47,13 +47,16 @@ zoesgroup = Group.create!(
   group_description: 'This is the description',
   creator_id: 3,
   user_id: [2, 3],
-  imageurl: "http://lorempixum.com/100/100/nature/3"
+  imageurl: "dinner.jpg"
 
       )
 
 # ........Tournaments ............
 
-alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends beta test', :tournament_description => 'This is an alpha test really', :group_id => 1, :user_id => [1, 2, 3]
+alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends Alpha test', :tournament_description => 'This is an alpha test really', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "group1"
+alexstournament2 = Tournament.create! :creator_id => 1, :name => 'Dine with friends Beta test', :tournament_description => 'This is an beta test', :group_id => 1, :user_id => [1, 2, 3]
+alexstournament3 = Tournament.create! :creator_id => 1, :name => 'Dine with friends bugtesting test', :tournament_description => 'Bugfixing Party', :group_id => 1, :user_id => [1, 2, 3]
+
 
 # ........EVENTS...........
 alstournyround1 = Event.create! :imageurl => "http://rs1229.pbsrc.com/albums/ee473/jvlentini/TESTCARDS/bbc-hd-test-card.png~c200", :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'First round!  Gonna be great', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'Camden', :outcome => 5
