@@ -19,12 +19,14 @@
       <p>1</p>
       <p>1</p>
 
+      
+
       <div class="group_members_top">
       <h3>Group users:</h3>
         <ul>
           <% @group.user_id.each do | user | %>
             <li><%= User.find(user).name %> </li>
-            <li><%= User.find(user).name %> </li>
+            <li><%= User.find(user).profile_image_url %> </li>
           <% end %>
         </ul>
       </div>
