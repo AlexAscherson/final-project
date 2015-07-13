@@ -9,7 +9,6 @@
     <p>
       <strong>Name:</strong>
       <%= @group.name %>
-
     </p>
     <p><%= @group.group_description %></p>
     <p>NEXT EVENT:<p>
@@ -18,11 +17,13 @@
     <div class="tournamentsbar">
     
       <div class="group_members_top">
+      Group Members
         <ul>
           <% @group.user_id.each do | user | %>
             <li>
               <% profileimg = User.find(user).profile_image_url %> 
-              <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> 
+              <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %>
+
               </li>
           <% end %>
         </ul>
@@ -35,38 +36,71 @@
 <div class="grouptournaments">
    
   <% @group.tournaments.each do | tournament | %>
-      <li>
-        <h3>Tournament: <%= tournament.name %></h3> <br>
-        <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
-        <%= tournament.tournament_description %>
-      </li>
+    <li>
 
-      <ul class="eventlist">
-        <div>
-          <h3><%= tournament.name %> Upcoming Events:</h3>
+      <%= link_to group_tournament_path(@group, tournament) do %>
+        <div>  
+          <h3>Tournament: <%= tournament.name %></h3> <br>
+          <div class="tournamentpreview">
+            <div class="tournamentimage">
+            <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
+            </div>
+
+            <ul class="tournamentul">
+              <li>
+                <div class="tournamentpreviewdescription">
+                  <%= tournament.tournament_description %>
+                </div>
+              </li>
+              <li>
+                <div class="tournamentpreviewscore">
+                 Current Round:
+                </div>
+              </li>
+               <li>
+                <div class="tournamentpreviewsprize">
+                 Prize Pool:
+                </div>
+                <li>
+                <div class="tournamentpreviewstake">
+                 Stake to Enter:
+                </div>
+                </li>
+              </li>
+
+            </ul>
+            
+          </div>
         </div>
+      <% end %>
+    </li>  
 
-        <% if tournament.events.present? %>
-         <% tournament.events.each_with_index do | event, index | %>
-            <li> 
-              <%= link_to group_tournament_event_path(@group, tournament, event) do %>
-                <div>  
-                    Round <%= index + 1 %>: <%= event.name %><br>
-                    <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
-                  </div>
-              <% end %>
-            </li>
-          <% end %> 
+    <ul class="eventlist">
+      <div>
+        <h3><%= tournament.name %> Upcoming Events:</h3>
+      </div>
 
-        <% else %>
-            There are no events for this tournament yet
+      <% if tournament.events.present? %>
+       <% tournament.events.each_with_index do | event, index | %>
+          <li> 
+            <%= link_to group_tournament_event_path(@group, tournament, event) do %>
+              <div>  
+                  Round <%= index + 1 %>: <%= event.name %><br>
+                  <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
+                </div>
             <% end %>
-      </ul>
+          </li>
+        <% end %> 
+
+      <% else %>
+          There are no events for this tournament yet
+          <% end %>
+    </ul>
 
       </li>
     <% end %>
   </ul>
-
+</div>
 </div>
 
 

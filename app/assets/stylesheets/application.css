@@ -111,4 +111,15 @@ left:0px;*/
   width: 100%;
 }
 
+.content{
+  font-family: futura;
+  text-align: center;
+  font-size: 150%
+}
 
+.content p{
+  line-height: 200%;
+  font-family: futura;
+  text-align: center;
+  font-size: 150%
+}

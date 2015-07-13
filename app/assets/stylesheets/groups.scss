@@ -185,35 +185,37 @@ li:hover {
     padding:20px;
     white-space:nowrap;
     overflow-x:auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 
   }
 
   .group_members_top ul{
     height: 150px;
     text-align: center;
-
-    
-
-
   }
 
   .group_members_top li{
     list-style-type: none;
-    margin:10px;
+    padding-bottom: 0px;
     display:inline-block
   }
 
   .profile_thumb{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     padding-top:10px;
+    padding-top:0px;
+    margin:  0px!important;
+    margin-right:0px;
   }
 
    .tournament_thumb{
     height: 150px;
     width: 300px;
-    padding-top:10px;
+    
   }
+
 
 
 
@@ -224,6 +226,9 @@ display: inline;}
 .grouptournaments{
   list-style-type: none;
   display: inline;
+  margin: 0px !important;
+
+
 
 }
 
@@ -272,5 +277,48 @@ display: inline;}
 //     margin:10px;
 //     display:inline-block
 // }
+
+.tournamentpreview{
+  // width: 50%;
+  height: 100%;
+  
+}
+
+.tournamentimage{
+  margin: 0px;
+  width: 30%;
+}
+
+.tournamentpreviewdescription{
+  height: 100%;
+  
+}
+.tournamentpreviewscore{
+  float: left;
+}
+
+li a:hover{
+  color: black;
+}
+
+.tournamentul{
+  list-style: none;
+  float: left;
+  width: 70%;
+  display: inline-block;
+
+}
+
+.tournamentul li{
+  display: inline-block;
+  width: 15%;
+}
+
+.tournamentul li:first-child {
+    width: 40%;
+}
+
+
+
 
 
