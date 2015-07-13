@@ -58,9 +58,9 @@ zoesgroup = Group.create!(
 
 # ........Tournaments ............
 
-alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends Alpha test', :tournament_description => 'This is the first ever test of the Dine with Friends App.  It will be a short and simple tournament, only rule: no ice-cream', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner-party2.jpg"
-alexstournament2 = Tournament.create! :creator_id => 1, :name => 'Dine with friends Beta test', :tournament_description => 'This is an beta test', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner2.jpg"
-alexstournament3 = Tournament.create! :creator_id => 1, :name => 'Dine with friends bugtesting test', :tournament_description => 'Bugfixing Party', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner3.jpg"
+alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends Alpha test', :tournament_description => 'This is the first ever test of the Dine with Friends App.  It will be a short and simple tournament, only rule: no ice-cream', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner-party2.jpg", :stake => 10
+alexstournament2 = Tournament.create! :creator_id => 1, :name => 'Dine with friends Beta test', :tournament_description => 'This is an beta test', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner2.jpg", :stake => 20
+alexstournament3 = Tournament.create! :creator_id => 1, :name => 'Dine with friends bugtesting test', :tournament_description => 'Bugfixing Party', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner3.jpg", :stake => 30
 
 
 # ........EVENTS...........
