@@ -21,64 +21,58 @@
         <ul>
           <% @group.user_id.each do | user | %>
             <li>
-            <% profileimg = User.find(user).profile_image_url %> 
-            <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> </li>
-
+              <% profileimg = User.find(user).profile_image_url %> 
+              <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> 
+              </li>
           <% end %>
         </ul>
       </div>
-      </div>
-
     </div>
-
-
+  </div>
 </div>
 
 
 <div class="grouptournaments">
    
+  <% @group.tournaments.each do | tournament | %>
+      <li>
+        <h3>Tournament: <%= tournament.name %></h3> <br>
+        <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
+        <%= tournament.tournament_description %>
+      </li>
 
-      <% @group.tournaments.each do | tournament | %>
-          <li><h3>Tournament: <%= tournament.name %></h3> <br>
-          <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
-          <%= tournament.tournament_description %>
-          </li>
+      <ul class="eventlist">
+        <div>
+          <h3><%= tournament.name %> Upcoming Events:</h3>
+        </div>
 
-          
-          Tournament Events:
-          <ul class="eventlist">
-
-         
-          
-             <% tournament.events.each_with_index do | event, index | %>
-
-                <li> <%= link_to group_tournament_event_path(@group, tournament, event) do %>
+        <% if tournament.events.present? %>
+         <% tournament.events.each_with_index do | event, index | %>
+            <li> 
+              <%= link_to group_tournament_event_path(@group, tournament, event) do %>
                 <div>  
                     Round <%= index + 1 %>: <%= event.name %><br>
                     <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
                   </div>
-                <% end %>
-                </li>
+              <% end %>
+            </li>
+          <% end %> 
 
-
-
-    
-            <% end %> 
-          </ul>
-
-          </li>
-        <% end %>
+        <% else %>
+            There are no events for this tournament yet
+            <% end %>
       </ul>
 
-    </div>
+      </li>
+    <% end %>
+  </ul>
 
+</div>
 
 
 <div class="contentwrap">
 
 <p id="notice"><%= notice %></p>
-
-
 
 
 

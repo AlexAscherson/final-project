@@ -224,6 +224,16 @@ display: inline;}
 .grouptournaments{
   list-style-type: none;
   display: inline;
+
+}
+
+.grouptournaments li{
+  background-color: #d6f1ec;
+}
+
+.grouptournaments li:hover {
+  background: #eee;
+  cursor: pointer;
 }
 
 .eventlist{
@@ -234,23 +244,33 @@ display: inline;}
 
 }
 .eventlist li{
-      margin:10px;
-    display:inline-block
-
-}
-
-.container{
-    padding:20px;
-    border:dotted 1px;
-    white-space:nowrap;
-    overflow-x:auto;
-}
-
-.box{
-  
-    background-color: red;
     margin:10px;
     display:inline-block
+
 }
+
+.eventlist li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.eventlist div{
+  margin: 0px;
+
+}
+
+// .container{
+//     padding:20px;
+//     border:dotted 1px;
+//     white-space:nowrap;
+//     overflow-x:auto;
+// }
+
+// .box{
+  
+//     background-color: red;
+//     margin:10px;
+//     display:inline-block
+// }
 
 
