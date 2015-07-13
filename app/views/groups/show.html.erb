@@ -1,9 +1,11 @@
 <style media="screen">
-  .group_show_top { background-image: url(<%= @group.imageurl %>); }
+  
+  .image_show_top{ background-image: url(<%= @group.imageurl %>); }
+
 </style>
 
-<div class="group_show_top">
-  <div class="group_show_top_text">
+<div class="image_show_top">
+  <div class="image_show_top_text">
     <p>
       <strong>Name:</strong>
       <%= @group.name %>
@@ -29,22 +31,42 @@
 
     </div>
 
+
 </div>
 
 
 <div class="grouptournaments">
-    <h3>Group Tournaments:</h3>
+   
 
       <% @group.tournaments.each do | tournament | %>
-          <li>Name:<%= tournament.name %> </li>
-          <li>Desc:<%= tournament.tournament_description %> </li>
-          Tournament Events:
-          <% tournament.events.each do | event | %>
-          <div class="eventlink">
-          <li><%= link_to content_tag(:span, event.name), group_tournament_event_path(@group, tournament, event) %> </li>
+          <li><h3>Tournament: <%= tournament.name %></h3> <br>
+          <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
+          <%= tournament.tournament_description %>
+          </li>
 
-          </div>
-          <% end %> 
+          
+          Tournament Events:
+          <ul class="eventlist">
+
+         
+          
+             <% tournament.events.each_with_index do | event, index | %>
+
+                <li> <%= link_to group_tournament_event_path(@group, tournament, event) do %>
+                <div>  
+                    Round <%= index + 1 %>: <%= event.name %><br>
+                    <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
+                  </div>
+                <% end %>
+                </li>
+
+
+
+    
+            <% end %> 
+          </ul>
+
+          </li>
         <% end %>
       </ul>
 

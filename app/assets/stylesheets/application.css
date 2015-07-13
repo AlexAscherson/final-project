@@ -54,6 +54,16 @@ top:0px;
 left:0px;
  }
 
+ .eventlink div {
+/*width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;*/
+ }
+
+
 /*.navwrap {
   text-align: center;
   margin: 0 auto;

@@ -1,3 +1,56 @@
+<style media="screen">
+  
+  .image_show_top{ background-image: url(<%= @event.imageurl %>); }
+
+</style>
+
+<div class="image_show_top">
+  <div class="image_show_top_text">
+    <p>
+      <strong>Name:</strong>
+      <%= @event.name %>
+
+    </p>
+    <p><%= @event.event_description %></p>
+    <p>NEXT EVENT:<p>
+    </div>
+
+    <div class="tournamentsbar">
+    
+      <div class="group_members_top">
+      
+        <ul>
+          <% @event.user_id.each do | user | %>
+            <li>
+            <% profileimg = User.find(user).profile_image_url %> 
+            <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> </li>
+
+          <% end %>
+        </ul>
+      </div>
+      </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 

@@ -11,7 +11,7 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1
   # GET /tournaments/1.json
   def show
-        @group = Group.find(params['group_id'])
+    @group = Group.find(params['group_id'])
 
   end
 

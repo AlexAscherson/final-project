@@ -19,6 +19,8 @@ Event.delete_all
 alex = User.create! :name => 'Alex', :bio => 'My Bio',  :email => 'alex@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"alex.jpg"
 harry = User.create! :name => 'Harry', :bio => 'My Bio', :email => 'harry@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"harry.jpg"
 zoe = User.create! :name => 'Zoe', :bio => 'My Bio', :email => 'zoe@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"zoe.jpg"
+grouse = User.create! :name => 'Grouse', :bio => 'My Bio', :email => 'grouse@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"grouse.jpg"
+remes = User.create! :name => 'Remes', :bio => 'My Bio', :email => 'remes@gmail.com', :password => 'password', :password_confirmation => 'password', :profile_image_url =>"remes.jpg"
 
 
 
@@ -28,7 +30,7 @@ alexsgroup = Group.create!(
   name: 'Alexs Awesome Group',
   group_description: 'This is the description',
   creator_id: 1,
-  user_id: [1, 2, 3,],
+  user_id: [1, 2, 3, 4, 5],
   imageurl: "group1.jpg"
       )
 
@@ -53,15 +55,17 @@ zoesgroup = Group.create!(
 
 # ........Tournaments ............
 
-alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends Alpha test', :tournament_description => 'This is an alpha test really', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "group1"
+alexstournament = Tournament.create! :creator_id => 1, :name => 'Dine with friends Alpha test', :tournament_description => 'This is an alpha test really', :group_id => 1, :user_id => [1, 2, 3], :imageurl => "dinner-party2.jpg"
 alexstournament2 = Tournament.create! :creator_id => 1, :name => 'Dine with friends Beta test', :tournament_description => 'This is an beta test', :group_id => 1, :user_id => [1, 2, 3]
 alexstournament3 = Tournament.create! :creator_id => 1, :name => 'Dine with friends bugtesting test', :tournament_description => 'Bugfixing Party', :group_id => 1, :user_id => [1, 2, 3]
 
 
 # ........EVENTS...........
-alstournyround1 = Event.create! :imageurl => "http://rs1229.pbsrc.com/albums/ee473/jvlentini/TESTCARDS/bbc-hd-test-card.png~c200", :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'First round!  Gonna be great', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'Camden', :outcome => 5
+alstournyround1 = Event.create! :imageurl => "http://rs1229.pbsrc.com/albums/ee473/jvlentini/TESTCARDS/bbc-hd-test-card.png~c200", :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'First round!  Gonna be great', :group_id => 1, :user_id => [1, 2, 3, 4, 5], :tournament_id => 1, :location =>'Camden', :outcome => 5
 alstournyround2 = Event.create! :imageurl => "http://top1walls.com/thumbs/movies-tv/kermit-the-frog-sesame-street-1747870-480x320.jpg", :host_id => 2, :name => 'Dinner at Harrys house', :event_description => 'Harry house.  Its the same as mine...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'Camden', :outcome => 5
-alstournyround3 = Event.create! :imageurl => "http://top1walls.com/thumbs/movies-tv/kermit-the-frog-sesame-street-1747870-480x320.jpg", :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Final at zoes...', :group_id => 1, :user_id => [1, 2, 3], :tournament_id => 1, :location =>'West London', :outcome => 7
+alstournyround3 = Event.create! :imageurl => "http://top1walls.com/thumbs/movies-tv/kermit-the-frog-sesame-street-1747870-480x320.jpg", :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Final at zoes...', :group_id => 1, :user_id => [1, 2, 3, 4, 5], :tournament_id => 1, :location =>'West London', :outcome => 7
+alstournyround4 = Event.create! :imageurl => "http://rs1229.pbsrc.com/albums/ee473/jvlentini/TESTCARDS/bbc-hd-test-card.png~c200", :host_id => 3, :name => 'Dinner at Grouses house', :event_description => 'Grouse House', :group_id => 1, :user_id => [1, 2, 3, 4, 5], :tournament_id => 1, :location =>'West London', :outcome => 7
+alstournyround5 = Event.create! :imageurl => "http://rs1229.pbsrc.com/albums/ee473/jvlentini/TESTCARDS/bbc-hd-test-card.png~c200", :host_id => 3, :name => 'Dinner at Remes house', :event_description => 'Remes Flat', :group_id => 1, :user_id => [1, 2, 3, 4, 5], :tournament_id => 1, :location =>'South London', :outcome => 7
 
 
 alex.group_id << 1 << 2 << 3

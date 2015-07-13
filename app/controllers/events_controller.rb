@@ -19,6 +19,8 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @group = Group.find(params['group_id'])
+    @tournament = Tournament.find(params['tournament_id'])
   end
 
   # GET /events/1/edit
@@ -33,12 +35,15 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
 
     respond_to do |format|
+      @group = Group.find(params['group_id'])
+      @tournament = Tournament.find(params['tournament_id'])
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to group_tournament_event_path(@group, @tournament, @event), notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
+
       end
     end
   end
