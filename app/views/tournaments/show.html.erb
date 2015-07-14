@@ -5,6 +5,10 @@
 </style>
 
 <div class="image_show_top">
+
+  <div class="createnewtourn">
+  <%= link_to 'Create New Event', new_group_tournament_event_path(@group, @tournament) %>
+  </div>
   <div class="image_show_top_text">
     <p>
       <strong>Name:</strong>
@@ -41,11 +45,42 @@
   <div class="content">
 
   <p id="notice"><%= notice %></p>
+  
+  <div>
+    <h3><%= @tournament.name %> Upcoming Events:</h3>
+    </div>
+  <ul class="eventlist">
+      
+
+      <% if @tournament.events.present? %>
+       <% @tournament.events.each_with_index do | event, index | %>
+          <li> 
+            <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
+              <div>  
+                  Round <%= index + 1 %>: <%= event.name %><br>
+                  <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
+                </div>
+            <% end %>
+          </li>
+        <% end %> 
+
+      <% else %>
+          There are no events for this tournament yet
+          <% end %>
+    </ul>
+
 
   <p>
     <strong>Tournament Name:</strong>
     <%= @tournament.name %>
   </p>
+  
+   <div class="tournamentpreviewsprize">
+                <% users = @tournament.user_id.count %>
+                <% stake = users * @tournament.stake %>
+
+                 Prize Pool: £<%=stake%>
+                </div>
 
   <p>
     <strong>Group:</strong>
