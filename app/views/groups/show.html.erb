@@ -59,7 +59,10 @@
               </li>
                <li>
                 <div class="tournamentpreviewsprize">
-                 Prize Pool:
+                <% users = tournament.user_id.count %>
+                <% stake = users * tournament.stake %>
+
+                 Prize Pool: <%=stake%>
                 </div>
                 <li>
                 <div class="tournamentpreviewstake">
