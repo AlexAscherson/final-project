@@ -1,43 +1,91 @@
-<p id="notice"><%= notice %></p>
+<style media="screen">
+  
+  .image_show_top{ background-image: url(<%= @tournament.imageurl %>); }
 
-<p>
-  <strong>Name:</strong>
-  <%= @tournament.name %>
-</p>
+</style>
 
-<p>
-  <strong>Creator:</strong>
-  <%= @tournament.creator_id %>
-</p>
+<div class="image_show_top">
+  <div class="image_show_top_text">
+    <p>
+      <strong>Name:</strong>
+      <%= @tournament.name %>
 
-<p>
-  <strong>Event description:</strong>
-  <%= @tournament.tournament_description %>
-</p>
+    </p>
+    <p><%= @tournament.tournament_description %></p>
+    <p>NEXT EVENT:<p>
+    </div>
 
-<p>
-  <%= image_tag(@tournament.imageurl) %>
-</p>
+    <div class="tournamentsbar">
+    Participants
 
-<p>
-  <strong>User:</strong>
-  <%= @tournament.user_id %>
-</p>
+    
+      <div class="group_members_top">
+      
+        <ul>
+          <% @tournament.user_id.each do | user | %>
+            <li>
+            <% profileimg = User.find(user).profile_image_url %> 
+            <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> </li>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @tournament.start_date %>
-</p>
+          <% end %>
+        </ul>
+      </div>
+      </div>
 
-<p>
-  <strong>End date:</strong>
-  <%= @tournament.end_date %>
-</p>
+    </div>
 
-<p>
-  <strong>Group:</strong>
-  <%= @tournament.group_id %>
-</p>
-<li> <%= link_to('Edit', edit_group_tournament_path(@group, @tournament)) %> </li>
-  <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
+
+</div>
+
+
+  <div class="content">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Tournament Name:</strong>
+    <%= @tournament.name %>
+  </p>
+
+  <p>
+    <strong>Group:</strong>
+    
+    <% group = Group.find(@tournament.group_id).name %> 
+    <%= group %>
+  </p>
+    
+
+  <p>
+    <strong>Creator:</strong>
+    <% creator = User.find(@tournament.creator_id).name %> 
+    <%= creator %>
+  </p>
+
+  <p>
+    <strong>Tournament description:</strong>
+    <%= @tournament.tournament_description %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @tournament.user_id %>
+  </p>
+
+  <p>
+    <strong>Start date:</strong>
+    <%= @tournament.start_date %>
+  </p>
+
+  <p>
+    <strong>End date:</strong>
+    <%= @tournament.end_date %>
+  </p>
+
+  
+
+
+  <li> <%= link_to('Edit', edit_group_tournament_path(@group, @tournament)) %> </li>
+    <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
+
+</div>
 

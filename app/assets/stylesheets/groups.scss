@@ -318,10 +318,25 @@ li a:hover{
 .tournamentul li{
   display: inline-block;
   width: 15%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .tournamentul li:first-child {
     width: 40%;
+}
+
+.tournamentul li:last-child {
+    width: 10%;
+}
+
+.tournamentenroll{
+      background: url(joinbutton.png) no-repeat center center; 
+      height: 40px;
+      width: 60px;
+
+    
+
 }
 
 

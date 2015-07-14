@@ -31,10 +31,11 @@ class TournamentsController < ApplicationController
   # POST /tournaments.json
   def create
     @tournament = Tournament.new(tournament_params)
+    @group = Group.find(params['group_id'])
 
     respond_to do |format|
       if @tournament.save
-        format.html { redirect_to @tournament, notice: 'Tournament was successfully created.' }
+        format.html { redirect_to group_tournament_path(@group, @tournament), notice: 'Tournament was successfully created.' }
         format.json { render :show, status: :created, location: @tournament }
       else
         format.html { render :new }
@@ -43,12 +44,13 @@ class TournamentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /tournaments/1
+  # PATCH/PUT /tournaments/1 
   # PATCH/PUT /tournaments/1.json
   def update
-    respond_to do |format|
+    @group = Group.find(params['group_id'])
+    respond_to do |format|  
       if @tournament.update(tournament_params)
-        format.html { redirect_to @tournament, notice: 'Tournament was successfully updated.' }
+        format.html { redirect_to group_tournament_path(@group, @tournament), notice: 'Tournament was successfully updated.' }
         format.json { render :show, status: :ok, location: @tournament }
       else
         format.html { render :edit }
@@ -75,6 +77,6 @@ class TournamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournament_params
-      params.require(:tournament).permit(:name, :creator_id, :event_description, :imageurl, :user_id, :start_date, :end_date, :group_id, :stake)
+      params.require(:tournament).permit(:name, :creator_id, :event_description, :imageurl, :start_date, :end_date, :group_id, :stake, user_id:[])
     end
 end
