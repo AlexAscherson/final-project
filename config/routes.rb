@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :groups do 
+    member do 
+      post 'ajax'
+    end
     resources :tournaments do
       resources :events
     end

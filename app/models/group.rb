@@ -4,3 +4,9 @@ class Group < ActiveRecord::Base
   has_many :tournaments
   has_many :events, through: :tournaments
 end
+
+def join()
+  @group = Group.find(params[:id])
+    # @group.join
+    @group.users << current_user
+end

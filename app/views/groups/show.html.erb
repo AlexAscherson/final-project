@@ -1,6 +1,6 @@
 <style media="screen">
   
-  .image_show_top{ background-image: url(<%= @group.imageurl %>); }
+  .image_show_top{ background-image: url("/assets/<%= @group.imageurl %>"); }
 
 </style>
 
@@ -14,6 +14,13 @@
   <div class="createnewtourn">
   <%= link_to 'Create New Tournament', new_group_tournament_path(@group) %>
   </div>
+
+  <div class="ajax">
+  <%= link_to 'activate Ajax', ajax_group_path, id: "ajax",  remote: true, method: :post %>
+  </div>
+  <!-- this is going to have onlick -->
+
+
   </div>
 
 

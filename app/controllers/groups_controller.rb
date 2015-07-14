@@ -1,10 +1,23 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html, :js
   # GET /groups
   # GET /groups.json
   def index
     @groups = Group.all
+  end
+
+  def ajax
+    @group = Group.find(params[:id])
+    # @group.join
+    
+    @group.users << current_user
+    binding.pry 
+    
+    respond_to do |format|
+        format.js
+      end
+    
   end
 
   # GET /groups/1
@@ -25,7 +38,7 @@ class GroupsController < ApplicationController
   # POST /groups
   # POST /groups.json
   def create
-    binding.pry
+    
     @group = Group.new(group_params)
 
 
