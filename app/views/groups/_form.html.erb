@@ -32,6 +32,13 @@
     <%= f.text_field :user_id %>
   </div>
 
+     <%= f.label :users %><br>
+    <% User.all.each do | user | %>
+      <%= check_box_tag "group[user_ids][]", user.id %>
+      <%= user.name %><br />
+    <% end %>
+
+
   
 
   

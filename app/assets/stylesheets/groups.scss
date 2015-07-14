@@ -30,13 +30,26 @@
   margin-top: 20px !important;
 }
 
+
+.buttonsbox{
+  float: right;
+  display: inline-block;
+  width: 25%
+}
 .createnewtourn{
   background-color: #058496;
-  width: 25%;
+  width: 100%;
   padding: 10px;
   margin-top: 20px !important;
-  float: right;
 }
+
+.joingroup{
+  background-color: #058496;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+}
+
 
 .toptext p{
   padding: 20px;
@@ -259,11 +272,16 @@ display: inline;}
     border:dotted 1px;
     white-space:nowrap;
     overflow-x:auto;
+    font-family: futura;
+    font-size:80%;
 
 }
 .eventlist li{
     margin:10px;
-    display:inline-block
+    display:inline-block;
+    font-family: futura;
+    font-size:20px;
+    text-align: center;
 
 }
 
@@ -274,8 +292,17 @@ display: inline;}
 
 .eventlist div{
   margin: 0px;
+  
 
 }
+
+.eventlist img{
+  margin-top: 5px;
+  margin-right: 0px;
+  
+
+}
+
 
 // .container{
 //     padding:20px;
@@ -327,23 +354,18 @@ li a:hover{
   width: 15%;
   margin: 0px;
   padding: 0px;
-}
-
-.tournamentul li:first-child {
+  &:first-child {
     width: 40%;
-}
-
-.tournamentul li:last-child {
-    width: 10%;
+  }
+  &:last-child {
+     width: 10%;
+  }
 }
 
 .tournamentenroll{
       background: url(joinbutton.png) no-repeat center center; 
       height: 40px;
       width: 60px;
-
-    
-
 }
 
 
