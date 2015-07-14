@@ -34,13 +34,18 @@
 .buttonsbox{
   float: right;
   display: inline-block;
-  width: 25%
+  width: 25%;
+   & a{
+    color: white;
+  }
+  
 }
 .createnewtourn{
   background-color: #058496;
   width: 100%;
   padding: 10px;
   margin-top: 20px !important;
+  color: white;
 }
 
 .joingroup{
@@ -48,6 +53,7 @@
   width: 100%;
   padding: 10px;
   margin-top: 20px !important;
+  color: white;
 }
 
 
@@ -267,6 +273,17 @@ display: inline;}
   cursor: pointer;
 }
 
+.grouptournaments li div{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.grouptournaments li div h3{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+
 .eventlist{
   padding:20px;
     border:dotted 1px;
@@ -363,9 +380,11 @@ li a:hover{
 }
 
 .tournamentenroll{
-      background: url(joinbutton.png) no-repeat center center; 
-      height: 40px;
-      width: 60px;
+  background-color: #058496;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
 }
 
 

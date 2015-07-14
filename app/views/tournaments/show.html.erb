@@ -6,9 +6,23 @@
 
 <div class="image_show_top">
 
+  
+
+  <div class="buttonsbox">
+
+  <div class="joingroup">
+  <%= link_to 'Join Tournament', new_group_tournament_path(@group) %>
+  </div>
+
   <div class="createnewtourn">
   <%= link_to 'Create New Event', new_group_tournament_event_path(@group, @tournament) %>
   </div>
+
+  </div>
+
+
+
+
   <div class="image_show_top_text">
     <p>
       <strong>Name:</strong>
