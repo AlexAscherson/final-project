@@ -10,7 +10,7 @@
 
   <div class="buttonsbox">
 
-  <div class="joingroup">
+  <div class="jointournament">
   <% if @tournament.users.exists?(current_user.id) %>
      <%= link_to 'Leave Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>
     <% else %>
