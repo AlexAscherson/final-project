@@ -4,6 +4,14 @@
 
 </style>
 
+<div class="joinevent">
+  <% if @event.users.exists?(current_user.id) %>
+     <%= link_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>
+    <% else %>
+      <%= link_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>    
+      <% end > %>
+  </div>
+
 <div class="image_show_top">
   <div class="image_show_top_text">
     <p>

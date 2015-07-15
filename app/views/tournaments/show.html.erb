@@ -14,7 +14,7 @@
   <% if @tournament.users.exists?(current_user.id) %>
      <%= link_to 'Leave Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>
     <% else %>
-      <%= link_to 'Join group', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>    
+      <%= link_to 'Join Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>    
       <% end > %>
   </div>
 

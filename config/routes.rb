@@ -10,7 +10,12 @@ Rails.application.routes.draw do
       member do 
       post 'jointournament'
     end
-      resources :events
+        resources :events do
+        member do 
+        post 'joinevent'
+      end
+
+end
     end
   end
 
