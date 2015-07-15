@@ -381,10 +381,12 @@ li a:hover{
   margin: 0px;
   padding: 0px;
   &:first-child {
-    width: 40%;
+    width: 35%;
   }
   &:last-child {
-     width: 10%;
+     width: 15%;
+     height: 100%;
+     line-height: 2;
   }
 }
 

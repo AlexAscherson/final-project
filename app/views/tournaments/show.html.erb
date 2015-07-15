@@ -130,8 +130,7 @@
   </p>
   
    <div class="tournamentpreviewsprize">
-                <% users = @tournament.user_id.count %>
-                <% stake = users * @tournament.stake %>
+                <% stake = @tournament.users.count * @tournament.stake %>
 
                  Prize Pool: £<%=stake%>
                 </div>

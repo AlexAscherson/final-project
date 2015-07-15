@@ -22,8 +22,8 @@
               </li>
                <li>
                 <div class="tournamentpreviewsprize">
-                <% users = tournament.user_id.count %>
-                <% stake = users * tournament.stake %>
+                
+                <% stake = tournament.users.count * tournament.stake %>
 
                  Prize Pool: <%=stake%>
                 </div>
@@ -34,8 +34,8 @@
                 </li>
               </li>
               <li>
-                <div class="tournamentenroll">
-                <%= link_to 'Join Tournament', jointournament_group_tournament_path(@group, tournament), id: "jointourn",  remote: true, method: :post %> 
+                <div class="jointournament">
+                <%= link_to 'Join Tournament', jointournament_group_tournament_path(@group, tournament), id: "jointournament",  remote: true, method: :post %> 
               
                 </div>
                 </li>
