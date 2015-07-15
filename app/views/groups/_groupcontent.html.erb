@@ -1,0 +1,75 @@
+ <% @group.tournaments.each do | tournament | %>
+    <li>
+
+      <%= link_to group_tournament_path(@group, tournament) do %>
+        <div>  
+          <h3>Tournament: <%= tournament.name %></h3> <br>
+          <div class="tournamentpreview">
+            <div class="tournamentimage">
+            <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
+            </div>
+
+            <ul class="tournamentul">
+              <li>
+                <div class="tournamentpreviewdescription">
+                  <%= tournament.tournament_description %>
+                </div>
+              </li>
+              <li>
+                <div class="tournamentpreviewscore">
+                 Current Round:
+                </div>
+              </li>
+               <li>
+                <div class="tournamentpreviewsprize">
+                <% users = tournament.user_id.count %>
+                <% stake = users * tournament.stake %>
+
+                 Prize Pool: <%=stake%>
+                </div>
+                <li>
+                <div class="tournamentpreviewstake">
+                 Stake to Enter: <%= tournament.stake %>
+                </div>
+                </li>
+              </li>
+              <li>
+                <div class="tournamentenroll">
+                <%= link_to 'Join Tournament', jointournament_group_tournament_path(@group, tournament), id: "ajax",  remote: true, method: :post %> 
+              
+                </div>
+                </li>
+              </li>
+
+            </ul>
+            
+          </div>
+        </div>
+      <% end %>
+    </li>  
+
+    <ul class="eventlist">
+      <div>
+        <h3><%= tournament.name %> Upcoming Events:</h3>
+      </div>
+
+      <% if tournament.events.present? %>
+       <% tournament.events.each_with_index do | event, index | %>
+          <li> 
+            <%= link_to group_tournament_event_path(@group, tournament, event) do %>
+              <div>  
+                  Round <%= index + 1 %>: <%= event.name %><br>
+                  <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
+                </div>
+            <% end %>
+          </li>
+        <% end %> 
+
+      <% else %>
+          There are no events for this tournament yet
+          <% end %>
+    </ul>
+
+      </li>
+    <% end %>
+  </ul>

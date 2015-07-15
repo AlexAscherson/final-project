@@ -7,7 +7,36 @@
     <p>The Dining App for the Socially Competitive</p>
  
 
-  <div class="createnew"> <%= link_to 'Create A New Group', new_group_path %> </div>
+  <div class="createnew">
+  <%= link_to "Create New Group", new_group_path, :class => "createnew", :remote => true, "data-toggle" => "modal", "data-target" => "#myModal" %>
+  </div>
+
+ 
+
+    <%= form_for(@group) do |f| %>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style='color:black;'>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+
+          <div class="modal-body">
+            <%= render 'form' %>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= submit_tag "Create", class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+
+
 
   <p>..Or join an existing group.</p>
 

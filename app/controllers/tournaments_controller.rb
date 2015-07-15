@@ -1,6 +1,21 @@
 class TournamentsController < ApplicationController
   before_action :set_tournament, only: [:show, :edit, :update, :destroy]
 
+  def jointournament
+    @group = Group.find(params['group_id'])
+    @tournament = Tournament.find(params[:id])
+
+    # @group.join
+    if @group.users.exists?(current_user.id)
+      @group.users.delete(current_user)
+    else
+      @group.users << current_user
+    end
+    respond_to do | format |
+      format.js
+    end
+  end
+
   # GET /tournaments
   # GET /tournaments.json
   def index

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       post 'ajax'
     end
     resources :tournaments do
+      member do 
+      post 'jointournament'
+    end
       resources :events
     end
   end

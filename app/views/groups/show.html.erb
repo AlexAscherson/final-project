@@ -9,17 +9,43 @@
   <div class="buttonsbox">
 
   <div class="joingroup">
-  <%= link_to 'Join Group', new_group_tournament_path(@group) %>
+  <% if @group.users.exists?(current_user.id) %>
+     <%= link_to 'Leave group', ajax_group_path, id: "ajax",  remote: true, method: :post %>
+    <% else %>
+      <%= link_to 'Join group', ajax_group_path, id: "ajax",  remote: true, method: :post %>    
+      <% end > %>
   </div>
+
   <div class="createnewtourn">
   <%= link_to 'Create New Tournament', new_group_tournament_path(@group) %>
   </div>
 
-  <div class="ajax">
-  <%= link_to 'activate Ajax', ajax_group_path, id: "ajax",  remote: true, method: :post %>
-  </div>
-  <!-- this is going to have onlick -->
+  <div class="createnewtourn">
 
+   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Edit Group</button>
+    </div>
+
+    <%= form_for(@group) do |f| %>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style='color:black;'>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+
+          <div class="modal-body">
+            <%= render 'form' %>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= submit_tag "Update", class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
 
   </div>
 
@@ -34,195 +60,22 @@
     </div>
 
     <div class="tournamentsbar">
-    
-      <div class="group_members_top">
-      Group Members
-        <ul>
-          <% @group.users.each do | user | %>
-            <li>
-              <% profileimg = user.profile_image_url %> 
-              <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %>
-
-              </li>
-          <% end %>
-        </ul>
+      <div class="group_members_top"> 
+      <%= render 'groupusers' %>
       </div>
     </div>
   </div>
+
 </div>
 
 
 <div class="grouptournaments">
-   
-  <% @group.tournaments.each do | tournament | %>
-    <li>
-
-      <%= link_to group_tournament_path(@group, tournament) do %>
-        <div>  
-          <h3>Tournament: <%= tournament.name %></h3> <br>
-          <div class="tournamentpreview">
-            <div class="tournamentimage">
-            <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
-            </div>
-
-            <ul class="tournamentul">
-              <li>
-                <div class="tournamentpreviewdescription">
-                  <%= tournament.tournament_description %>
-                </div>
-              </li>
-              <li>
-                <div class="tournamentpreviewscore">
-                 Current Round:
-                </div>
-              </li>
-               <li>
-                <div class="tournamentpreviewsprize">
-                <% users = tournament.user_id.count %>
-                <% stake = users * tournament.stake %>
-
-                 Prize Pool: <%=stake%>
-                </div>
-                <li>
-                <div class="tournamentpreviewstake">
-                 Stake to Enter: <%= tournament.stake %>
-                </div>
-                </li>
-              </li>
-              <li>
-                <div class="tournamentenroll">
-                Enroll
-              
-                </div>
-                </li>
-              </li>
-
-            </ul>
-            
-          </div>
-        </div>
-      <% end %>
-    </li>  
-
-    <ul class="eventlist">
-      <div>
-        <h3><%= tournament.name %> Upcoming Events:</h3>
-      </div>
-
-      <% if tournament.events.present? %>
-       <% tournament.events.each_with_index do | event, index | %>
-          <li> 
-            <%= link_to group_tournament_event_path(@group, tournament, event) do %>
-              <div>  
-                  Round <%= index + 1 %>: <%= event.name %><br>
-                  <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
-                </div>
-            <% end %>
-          </li>
-        <% end %> 
-
-      <% else %>
-          There are no events for this tournament yet
-          <% end %>
-    </ul>
-
-      </li>
-    <% end %>
-  </ul>
-</div>
-</div>
+     
+<%= render 'groupcontent' %>
 
 
 <div class="contentwrap">
 
-
-
 <p id="notice"><%= notice %></p>
 
-
-
-<div class="groupheader">
-
-
-
-  <!-- <p class="topimage">
-    <%= image_tag(@group.imageurl) %>
-  </p> -->
-
-  </div>
-
-  <div class="body">
-
-
-  <div class="column1">
-
-  </div>
-
-  <div class="column2">
-  <p>
-    <strong>Name:</strong>
-    <%= @group.name %>
-  </p>
-
-  <p>
-    <strong>Owner/Admin:</strong>
-    <%= @group.creator_id %>
-  </p>
-
-  <p>
-    <strong>Group description:</strong>
-    <%= @group.group_description %>
-  </p>
-     
-
-  <p>
-    <strong>Users:</strong>
-    <%= @group.user_id %>
-  </p>
-
-   </div>
-
-  
-
-  <div class="grouptournaments">
-    <h3>Group Tournaments:</h3>
-
-      <% @group.tournaments.each do | tournament | %>
-          <li>Name:<%= tournament.name %> </li>
-          <li>Desc:<%= tournament.tournament_description %> </li>
-          Tournament Events:
-          <% tournament.events.each do | event | %>
-          <div class="eventlink">
-          <li><%= link_to content_tag(:span, event.name), group_tournament_event_path(@group, tournament, event) %> </li>
-
-          </div>
-          <% end %> 
-        <% end %>
-      </ul>
-
-    </div>
-
-    <% @group.tournaments.each do |tournament| %>
-          <li>
-            <%= image_tag(tournament.imageurl, :alt => "rss feed") %>
-            <!-- <td><%= tournament.imageurl %></td> -->
-            <h3><%= tournament.name %></h3></td>
-            <!-- <td><%= tournament.creator_id %></td> -->
-            <p><%= tournament.tournament_description %></p>
-            
-            <%= link_to 'Show', group_tournament_path(@group, tournament) %>
-            <%= link_to 'Edit', edit_group_tournament_path(@group, tournament) %>
-            <%= link_to 'Destroy', group_tournament_path(@group, tournament), method: :delete, data: { confirm: 'Are you sure?' } %>
-          </li>
-         
-        <% end %>
-
-
-
-
-  <%= link_to 'Edit', edit_group_path(@group) %> |
-  <%= link_to 'Back', groups_path %>
-
-</div>
-
-</div
+</div></div>

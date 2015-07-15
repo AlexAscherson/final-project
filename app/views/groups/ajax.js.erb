@@ -1,0 +1,13 @@
+
+
+<% if @group.users.exists?(current_user.id) %>
+   $('.group_members_top').html("<%= escape_javascript(render partial:'groupusers') %>")
+   console.log("memberalready");
+   $('.joingroup').html("<%= escape_javascript(link_to 'Leave Group', ajax_group_path, id: "ajax",  remote: true, method: :post ) %>") 
+
+    <% else %>
+   $('.group_members_top').html("<%= escape_javascript(render partial:'groupusers') %>")
+    console.log("nomember");
+   $('.joingroup').html("<%= escape_javascript(link_to 'Join Group', ajax_group_path, id: "ajax",  remote: true, method: :post ) %>") 
+
+     <%  end %>

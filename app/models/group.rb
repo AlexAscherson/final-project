@@ -5,8 +5,9 @@ class Group < ActiveRecord::Base
   has_many :events, through: :tournaments
 end
 
-def join()
-  @group = Group.find(params[:id])
-    # @group.join
-    @group.users << current_user
-end
+# def join()
+#   @group = Group.find(params[:id])
+#     # @group.join
+#     @group.users << current_user
+# end
+# This is doing nothign right now

@@ -5,19 +5,28 @@ class GroupsController < ApplicationController
   # GET /groups.json
   def index
     @groups = Group.all
+    @group = Group.new
+  end
+
+  def checkmembership
+    if @group.users.exists?(current_user.id)
+      @member = true
+    else
+      @member  = false
+    end
   end
 
   def ajax
     @group = Group.find(params[:id])
     # @group.join
-    
-    @group.users << current_user
-    binding.pry 
-    
-    respond_to do |format|
-        format.js
-      end
-    
+    if @group.users.exists?(current_user.id)
+      @group.users.delete(current_user)
+    else
+      @group.users << current_user
+    end
+    respond_to do | format |
+      format.js
+    end
   end
 
   # GET /groups/1
@@ -46,9 +55,11 @@ class GroupsController < ApplicationController
       if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully created.' }
         format.json { render :show, status: :created, location: @group }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @group.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
