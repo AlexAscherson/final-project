@@ -1,9 +1,9 @@
 <% if @event.users.exists?(current_user.id) %>
   
-   $('.eventenroll').html("<%= escape_javascript(link_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post ) %>") 
+   $('.joinevent').html("<%= escape_javascript(link_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post ) %>") 
 
     <% else %>
   
-   $('.eventenroll').html("<%= escape_javascript(link_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post ) %>") 
+   $('.joinevent').html("<%= escape_javascript(link_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post ) %>") 
 
      <%  end %>
