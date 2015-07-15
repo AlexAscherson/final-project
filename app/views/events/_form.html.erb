@@ -39,14 +39,11 @@
     <%= f.label :end_date %><br>
     <%= f.datetime_select :end_date %>
   </div>
-  <div class="field">
-    <%= f.label :group_id %><br>
-    <%= f.number_field :group_id %>
-  </div>
-  <div class="field">
-    <%= f.label :tournament_id %><br>
-    <%= f.text_area :tournament_id %>
-  </div>
+ 
+
+  <%= f.hidden_field :tournament_id, :value => @tournament.id %>
+  <%= f.hidden_field :group_id, :value => @group.id %>
+
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>

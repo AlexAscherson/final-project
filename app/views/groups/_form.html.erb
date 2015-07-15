@@ -15,10 +15,7 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :creator_id %><br>
-    <%= f.number_field :creator_id %>
-  </div>
+ 
   <div class="field">
     <%= f.label :group_description %><br>
     <%= f.text_area :group_description %>
@@ -37,6 +34,11 @@
       <%= check_box_tag "group[user_ids][]", user.id %>
       <%= user.name %><br />
     <% end %>
+
+        <%= f.hidden_field :creator_id, :value => current_user.id %>
+    <%= f.hidden_field :group_id, :value => @group.id %>
+
+
 
 
   
