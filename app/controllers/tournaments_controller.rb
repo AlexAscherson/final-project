@@ -6,14 +6,15 @@ class TournamentsController < ApplicationController
     @tournament = Tournament.find(params[:id])
 
     # @group.join
-    if @group.users.exists?(current_user.id)
-      @group.users.delete(current_user)
+    if @tournament.users.exists?(current_user.id)
+      @tournament.users.delete(current_user)
     else
-      @group.users << current_user
+      @tournament.users << current_user
     end
     respond_to do | format |
       format.js
     end
+    
   end
 
   # GET /tournaments

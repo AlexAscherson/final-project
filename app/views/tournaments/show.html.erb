@@ -11,7 +11,11 @@
   <div class="buttonsbox">
 
   <div class="joingroup">
-  <%= link_to 'Join Tournament', new_group_tournament_path(@group) %>
+  <% if @tournament.users.exists?(current_user.id) %>
+     <%= link_to 'Leave Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>
+    <% else %>
+      <%= link_to 'Join group', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>    
+      <% end > %>
   </div>
 
   <div class="createnewtourn">
@@ -20,6 +24,7 @@
 
   </div>
 
+ 
 
 
 

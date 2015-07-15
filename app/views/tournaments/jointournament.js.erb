@@ -1,2 +1,9 @@
-alert('join tournament erb found');
-<% binding.pry %>
+<% if @tournament.users.exists?(current_user.id) %>
+  
+   $('.tournamentenroll').html("<%= escape_javascript(link_to 'Leave Tournament', jointournament_group_tournament_path, id: "jointourn",  remote: true, method: :post ) %>") 
+
+    <% else %>
+  
+   $('.tournamentenroll').html("<%= escape_javascript(link_to 'Join Tournament', jointournament_group_tournament_path, id: "jointourn",  remote: true, method: :post ) %>") 
+
+     <%  end %>

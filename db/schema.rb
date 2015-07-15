@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713161216) do
+ActiveRecord::Schema.define(version: 20150715201443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 20150713161216) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "user_id"
+  end
+
+  add_index "events_users", ["event_id", "user_id"], name: "index_events_users_on_event_id_and_user_id", using: :btree
+
   create_table "groups", force: :cascade do |t|
     t.string   "name"
     t.integer  "creator_id"
@@ -77,6 +84,11 @@ ActiveRecord::Schema.define(version: 20150713161216) do
     t.datetime "updated_at",             null: false
     t.text     "tournament_description"
     t.integer  "stake"
+  end
+
+  create_table "tournaments_users", id: false, force: :cascade do |t|
+    t.integer "tournament_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
