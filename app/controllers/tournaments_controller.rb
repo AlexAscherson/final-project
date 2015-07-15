@@ -14,7 +14,7 @@ class TournamentsController < ApplicationController
     respond_to do | format |
       format.js
     end
-    
+
   end
 
   # GET /tournaments
@@ -28,7 +28,7 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1.json
   def show
     @group = Group.find(params['group_id'])
-
+    @event = Event.new
   end
 
   # GET /tournaments/new
