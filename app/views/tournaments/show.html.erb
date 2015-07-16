@@ -73,21 +73,13 @@
     </div>
 
     <div class="tournamentsbar">
-    Participants
-
     
-      <div class="group_members_top">
-      
-        <ul>
-          <% @tournament.user_id.each do | user | %>
-            <li>
-            <% profileimg = User.find(user).profile_image_url %> 
-            <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> </li>
-
-          <% end %>
-        </ul>
+    
+      <div class="tournamentsbar">
+      <div class="group_members_top"> 
+      <%= render '/groups/groupusers' %>
       </div>
-      </div>
+    </div>
 
     </div>
 

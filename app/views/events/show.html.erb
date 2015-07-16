@@ -55,78 +55,25 @@
 
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            Sidebar content
+        </div>
+        
+        <div class="col-md-10">
+          <div class="content">
+          <%= render 'eventinfo' %> 
+          </div>
 
-
-
-
-
-
-
-
-<div class="content">
-
-<p id="notice"><%= notice %></p>
-
-<!-- <p class="topimage">
-  <%= image_tag(@event.imageurl) %>
-</p> -->
-
-<p>
-  <strong>Tournament:</strong>
-  <% tournament = Tournament.find(@event.tournament_id).name %> 
-  <%= tournament %>
-</p>
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Host:</strong>
-  <% host = User.find(@event.host_id).name %> 
-  <%= host %>
-</p>
-
-<p>
-  <strong>Event description:</strong>
-  <%= @event.event_description %>
-</p>
-
-<p>
-
-
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
-
-<p>
-  <strong>Group:</strong>
-  <% group = Group.find(@event.group_id).name %> 
-  <%= group %>
-</p>
-
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Outcome:</strong>
-  <%= @event.outcome %>
-</p>
-
-
-<td><%= link_to 'Edit', edit_group_tournament_event_path(@group, @tournament, @event) %></td>
-
-<td><%= link_to 'Destroy', group_tournament_event_path(@group, @tournament, @event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+        </div>
+    </div>
 </div>
+
+
+
+
+
+
+
+
