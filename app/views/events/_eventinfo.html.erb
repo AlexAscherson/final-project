@@ -18,6 +18,20 @@
 </p>
 
 <p>
+<strong>Status:</strong>
+<% if @event.start_date.present? %>
+  <% if @event.start_date.past? %>
+    <%= 'Event has finished' %>
+    <% else %>
+    <%= 'Event is coming up' %>
+    <% end %>
+  <% else %>
+  <%= 'Event has not date' %>
+  <% end %>
+
+</p>
+
+<p>
   <strong>Host:</strong>
   <% host = User.find(@event.host_id).name %> 
   <%= host %>
@@ -36,10 +50,10 @@
   <%= @event.start_date %>
 </p>
 
-<p>
+<!-- <p>
   <strong>End date:</strong>
   <%= @event.end_date %>
-</p>
+</p> -->
 
 <p>
   <strong>Group:</strong>

@@ -18,7 +18,7 @@
 $(document).ready(function() {
   
  $( ".membersheader" ).click(function() {
-  $( ".group_members_top ul" ).slideToggle( "slow", function() {
+  $( ".slider" ).slideToggle( "slow", function() {
     // Animation complete.
   });
 });

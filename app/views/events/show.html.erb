@@ -29,20 +29,15 @@
     </div>
 
     <div class="tournamentsbar">
-    Guests
     
-      <div class="group_members_top">
-      
-        <ul>
-          <% @event.user_id.each do | user | %>
-            <li>
-            <% profileimg = User.find(user).profile_image_url %> 
-            <%= image_tag(profileimg, :alt => "rss feed", :class => "profile_thumb") %> </li>
+    
+      <div class="tournamentsbar">
+      <div class="group_members_top"> 
+      <%= render 'eventusers' %>
+      </div>
+    </div>
 
-          <% end %>
-        </ul>
-      </div>
-      </div>
+    </div>
 
     </div>
 
