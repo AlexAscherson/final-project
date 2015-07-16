@@ -10,9 +10,9 @@
 
     <div class="joinevent">
       <% if @event.users.exists?(current_user.id) %>
-         <%= button_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>
+         <%= button_to 'Leave Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>
         <% else %>
-          <%= button_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>    
+          <%= button_to 'Join Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>    
           <% end > %>
     </div>
   </div>  
