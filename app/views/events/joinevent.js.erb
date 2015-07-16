@@ -1,11 +1,11 @@
 <% if @event.users.exists?(current_user.id) %>
   
    $('.joinevent').html("<%= escape_javascript(link_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post ) %>") 
-   $('.group_members_top').html("<%= escape_javascript(render partial:'eventusers') %>")
+   $('.membersheader').html("<%= escape_javascript(render partial:'eventusers') %>")
    console.log("memberalready");
     <% else %>
   
    $('.joinevent').html("<%= escape_javascript(link_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post ) %>") 
-   $('.group_members_top').html("<%= escape_javascript(render partial:'eventusers') %>")
+   $('.membersheader').html("<%= escape_javascript(render partial:'eventusers') %>")
    console.log("memberalready");
      <%  end %>

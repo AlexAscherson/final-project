@@ -19,7 +19,7 @@
 
 $(document).ready(function() {
   
- $( ".membersheader" ).click(function() {
+ $( ".group_members_top" ).click(function() {
   $( ".slider" ).slideToggle( "slow", function() {
     // Animation complete.
   });
