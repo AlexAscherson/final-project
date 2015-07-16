@@ -72,6 +72,12 @@
   <%= @event.outcome %>
 </p>
 
+Starter : <%= rating_for @event, "Starter" %>
+Main : <%= rating_for @event, "Main" %>
+Desert : <%= rating_for @event, "Desert" %>
+Entertainment : <%= rating_for @event, "Entertainment" %>
+
+
 
 <td><%= link_to 'Edit', edit_group_tournament_event_path(@group, @tournament, @event) %></td>
 
