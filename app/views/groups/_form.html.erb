@@ -15,7 +15,7 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
- 
+  
   <div class="field">
     <%= f.label :group_description %><br>
     <%= f.text_area :group_description %>
@@ -24,27 +24,20 @@
     <%= f.label :imageurl %><br>
     <%= f.text_field :imageurl %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-
+  
      <%= f.label :users %><br>
     <% User.all.each do | user | %>
       <%= check_box_tag "group[user_ids][]", user.id %>
       <%= user.name %><br />
     <% end %>
 
-        <%= f.hidden_field :creator_id, :value => current_user.id %>
-    <%= f.hidden_field :group_id, :value => @group.id %>
 
-
+  <%= f.hidden_field :creator_id, :value => current_user.id %>
 
 
   
-
-  
-  <div class="actions">
+  <div class="actions hide">
     <%= f.submit %>
   </div>
+
 <% end %>

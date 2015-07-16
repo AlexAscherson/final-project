@@ -1,6 +1,11 @@
+<p>
+  <strong>Group:</strong>
+    <%= link_to(@group.name, group_path(@group)) %>
+</p>
+
 <ul class="othereventlist">
       <div>
-        <h3>Other Events in the <%= @tournament.name %> Tournament</h3>
+        <h3>Events in the <%= link_to(@tournament.name, group_tournament_path(@group, @tournament)) %> Tournament</h3>
       </div>
 
       

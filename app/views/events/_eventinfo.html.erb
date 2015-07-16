@@ -5,11 +5,9 @@
   <%= image_tag(@event.imageurl) %>
 </p> -->
 
-<p>
-  <strong>Tournament:</strong>
-  <% tournament = Tournament.find(@event.tournament_id).name %> 
-  <%= tournament %>
-</p>
+
+
+
 
 
 <p>
@@ -40,6 +38,8 @@
 <p>
   <strong>Event description:</strong>
   <%= @event.event_description %>
+
+
 </p>
 
 <p>
@@ -47,7 +47,7 @@
 
 <p>
   <strong>Start date:</strong>
-  <%= @event.start_date %>
+  <%= @event.start_date.to_date %>
 </p>
 
 <!-- <p>
@@ -55,11 +55,6 @@
   <%= @event.end_date %>
 </p> -->
 
-<p>
-  <strong>Group:</strong>
-  <% group = Group.find(@event.group_id).name %> 
-  <%= group %>
-</p>
 
 
 <p>
@@ -67,15 +62,35 @@
   <%= @event.location %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Outcome:</strong>
   <%= @event.outcome %>
-</p>
+</p> -->
 
-Starter : <%= rating_for @event, "Starter" %>
-Main : <%= rating_for @event, "Main" %>
-Desert : <%= rating_for @event, "Desert" %>
-Entertainment : <%= rating_for @event, "Entertainment" %>
+   <div class="eventactive">
+              <% ratings = @event.rates("Rating").count %>
+              <% users = @event.users.count %>
+
+              <% if ratings == users %>
+              Event complete! All users have voted
+               <% @event.outcome = 1 %>
+               <% @event.save %>
+
+              <% else %>
+              Waiting for guests to finish voting
+              <% end %>
+              </div>
+
+
+
+
+
+
+<p>
+<div class="staravg">
+Current Rating: <%= rating_for @event, "Rating", stars:10, enable_half: true, disable_after_rate: true, imdb_avg: true  %>
+</div>
+</p>
 
 
 

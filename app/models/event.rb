@@ -4,5 +4,5 @@ class Event < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_one :group, through: :tournaments  
   scope :latestevent, -> { order 'start_date ASC' }
-  ratyrate_rateable "Starter", "Main", "Desert", "Entertainment"
+  ratyrate_rateable "Rating"
 end
