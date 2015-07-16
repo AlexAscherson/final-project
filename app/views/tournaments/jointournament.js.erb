@@ -1,11 +1,13 @@
 <% if @tournament.users.exists?(current_user.id) %>
   
-   $('.jointournament').html("<%= escape_javascript(link_to 'Leave Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post ) %>") 
+   $('.jointournament').html("<%= escape_javascript(button_to 'Leave Tournament', jointournament_group_tournament_path, :class =>"btn btn-primary btn-lg", id: "jointournament",  remote: true, method: :post ) %>") 
    $('.group_members_top').html("<%= escape_javascript(render partial:'tournamentusers') %>")
    console.log("memberalready");
     <% else %>
   
-   $('.jointournament').html("<%= escape_javascript(link_to 'Join Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post ) %>") 
+   $('.jointournament').html("<%= escape_javascript(button_to 'Join Tournament', jointournament_group_tournament_path, :class =>"btn btn-primary btn-lg", id: "jointournament",  remote: true, method: :post ) %>") 
    $('.group_members_top').html("<%= escape_javascript(render partial:'tournamentusers') %>")
    console.log("memberalready");
      <%  end %>
+
+

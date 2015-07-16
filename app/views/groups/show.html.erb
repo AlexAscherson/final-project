@@ -10,11 +10,14 @@
 
   <div class="joingroup">
   <% if @group.users.exists?(current_user.id) %>
-     <%= link_to 'Leave group', ajax_group_path, id: "ajax",  remote: true, method: :post %>
+     <%= button_to 'Leave group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post %>
     <% else %>
-      <%= link_to 'Join group', ajax_group_path, id: "ajax",  remote: true, method: :post %>    
+      <%= button_to 'Join group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post %>    
       <% end > %>
   </div>
+
+
+
   
   <!-- this is the new tournament button -->
 

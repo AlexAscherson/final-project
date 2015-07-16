@@ -1,13 +1,20 @@
-
+console.log("ajaxfired");
 
 <% if @group.users.exists?(current_user.id) %>
+      
+    console.log("leaving");
+   $('.joingroup').html("<%= escape_javascript(button_to 'Leave group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post ) %>") 
+   console.log("joining");
+
    $('.group_members_top').html("<%= escape_javascript(render partial:'groupusers') %>")
-   console.log("memberalready");
-   $('.joingroup').html("<%= escape_javascript(link_to 'Leave Group', ajax_group_path, id: "ajax",  remote: true, method: :post ) %>") 
+
+   
 
     <% else %>
    $('.group_members_top').html("<%= escape_javascript(render partial:'groupusers') %>")
-    console.log("nomember");
-   $('.joingroup').html("<%= escape_javascript(link_to 'Join Group', ajax_group_path, id: "ajax",  remote: true, method: :post ) %>") 
+    console.log("leaving");
+
+   $('.joingroup').html("<%= escape_javascript(button_to 'Join group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post )  %>") 
 
      <%  end %>
+

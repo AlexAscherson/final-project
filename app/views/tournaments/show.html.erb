@@ -12,9 +12,9 @@
 
   <div class="jointournament">
   <% if @tournament.users.exists?(current_user.id) %>
-     <%= link_to 'Leave Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>
+     <%= button_to 'Leave Tournament', jointournament_group_tournament_path, :class =>"btn btn-primary btn-lg", id: "jointournament",  remote: true, method: :post %>
     <% else %>
-      <%= link_to 'Join Tournament', jointournament_group_tournament_path, id: "jointournament",  remote: true, method: :post %>    
+      <%= button_to 'Join Tournament', jointournament_group_tournament_path, :class =>"btn btn-primary btn-lg", id: "jointournament",  remote: true, method: :post %>    
       <% end > %>
   </div>
 
@@ -209,4 +209,5 @@
     <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
 
 </div>
+
 

@@ -37,13 +37,14 @@
   float: right;
   display: inline-block;
   width: 25%;
+  background: rgba(54, 25, 25, 0.5);
    & a{
     color: white;
   }
   
 }
 .createnewtourn{
-  background-color: #058496;
+  // background-color: #058496;
   width: 100%;
   padding: 10px;
   margin-top: 20px !important;
@@ -60,7 +61,7 @@
 
 
 .joingroup{
-  background-color: #058496;
+  // background-color: #058496;
   width: 100%;
   padding: 10px;
   margin-top: 20px !important;

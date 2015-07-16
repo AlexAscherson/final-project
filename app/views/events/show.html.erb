@@ -10,9 +10,9 @@
 
     <div class="joinevent">
       <% if @event.users.exists?(current_user.id) %>
-         <%= link_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>
+         <%= button_to 'Leave Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>
         <% else %>
-          <%= link_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>    
+          <%= button_to 'Join Event', joinevent_group_tournament_event_path, id: "joinevent",  remote: true, method: :post %>    
           <% end > %>
     </div>
   </div>  
@@ -52,7 +52,9 @@
     <div class="row">
         <div class="col-md-2">
              
+          <div class="eventscol1">   
           <%= render 'otherevents' %> 
+          </div>
         
       </div>
 
