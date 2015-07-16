@@ -1,8 +1,10 @@
 <style media="screen">
   
-  .image_show_top{ background-image: url(<%= @event.imageurl %>); }
+  .image_show_top{ background-image: url("/assets/<%= @event.imageurl %>"); }
 
 </style>
+
+<div class="image_show_top">
 
 <div class="buttonsbox">
 
@@ -15,7 +17,7 @@
     </div>
   </div>  
 
-<div class="image_show_top">
+
   <div class="image_show_top_text">
     <p>
       <strong>Name:</strong>
@@ -65,13 +67,19 @@
 
 <p id="notice"><%= notice %></p>
 
-
 <!-- <p class="topimage">
   <%= image_tag(@event.imageurl) %>
 </p> -->
 
 <p>
-  <strong>Name:</strong>
+  <strong>Tournament:</strong>
+  <% tournament = Tournament.find(@event.tournament_id).name %> 
+  <%= tournament %>
+</p>
+
+
+<p>
+  <strong>Event:</strong>
   <%= @event.name %>
 </p>
 
@@ -105,11 +113,6 @@
   <%= group %>
 </p>
 
-<p>
-  <strong>Tournament:</strong>
-  <% tournament = Tournament.find(@event.tournament_id).name %> 
-  <%= tournament %>
-</p>
 
 <p>
   <strong>Location:</strong>
