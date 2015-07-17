@@ -29,6 +29,10 @@ class TournamentsController < ApplicationController
   def show
     @group = Group.find(params['group_id'])
     @event = Event.new
+    respond_to do | format |
+      format.js
+      format.html
+    end
   end
 
   # GET /tournaments/new

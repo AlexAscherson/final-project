@@ -1,0 +1,47 @@
+ <% @group.tournaments.each do | tournament | %>
+      
+      <%= link_to group_tournament_path(@group, tournament) , id:"show", remote: true, method: :get do %>
+        <div>  
+          <div class="tournamentpreview">
+            
+
+            <ul class="tournamentul">
+              <li>
+                <h3>Tournament: <%= tournament.name %></h3>
+                <div class="tournamentimage">
+                  <%= image_tag(tournament.imageurl, :class => "tournament_thumb") %>
+                  </div>
+                <div class="tournamentpreviewdescription">
+                  <%= tournament.tournament_description %>
+                </div>
+              </li>
+              <li>
+                <div class="sidebarwrap">
+                  <div class="tournamentpreviewscore">
+                   Tournament Status:
+                  </div>
+              
+                  <div class="tournamentpreviewsprize"> 
+                  <% stake = tournament.users.count * tournament.stake %>
+                   Prize Pool: <%=stake%>
+                  </div>
+                 
+                  <div class="tournamentpreviewstake">
+                   Stake to Enter: <%= tournament.stake %>
+                  </div>
+                </div>
+                
+              </li>
+              <li>
+                <div class="jointournament">
+                <%= button_to 'Join Tournament', jointournament_group_tournament_path(@group, tournament), :class =>"btn btn-primary btn-lg", id: "jointournament",  remote: true, method: :post %> 
+              
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+     
+      <% end %>
+    <% end %>

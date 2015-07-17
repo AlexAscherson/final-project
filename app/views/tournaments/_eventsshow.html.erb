@@ -1,0 +1,12 @@
+
+        <ul>
+          <% @tournament.events.each do | event | %>
+            <li>
+              <% eventimg = event.imageurl %> 
+              <%= image_tag(eventimg, :alt => "rss feed", :class => "event_thumb") %>
+              <%= event.name %> 
+
+              </li>
+          <% end %>
+        </ul>
+    

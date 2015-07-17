@@ -37,10 +37,13 @@
   float: right;
   display: inline-block;
   width: 25%;
+  margin-right: 0px;
+  padding-right:0px;
   background: rgba(54, 25, 25, 0.5);
    & a{
     color: white;
   }
+
   
 }
 .createnewtourn{
@@ -376,26 +379,42 @@ li a:hover{
 
 .tournamentul{
   list-style: none;
-  float: left;
-  width: 70%;
-  display: inline-block;
+  // float: left;
+  width: 100%;
+  // display: inline-block;
+  background-color:#d6f1ec;
 
 }
 
 .tournamentul li{
-  display: inline-block;
-  width: 15%;
+  // display: inline-block;
+ 
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  border-bottom: solid black 2px;
   &:first-child {
-    width: 35%;
+    width: 100%;
   }
   &:last-child {
-     width: 15%;
+     width: 100%;
      height: 100%;
      line-height: 2;
   }
 }
+
+
+
+.sidebarwrap{
+  width: 100%!important;
+}
+
+.sidebarwrap div{
+  display: inline-block;
+
+  width: 30%!important;}
+
 
 .tournamentenroll{
   background-color: #058496;
@@ -420,8 +439,31 @@ li a:hover{
   background: rgba(54, 25, 25, .5);
 };
 
+.groupscol1{
+  border: solid black 2px;
+  border-top: 1px;
+}
 
+.col-md-2{
+  margin-left: 2px!important;
+}
 
+.groupcol2{
+  width: 73.84%!important;
+  background: url("background.jpg") no-repeat center; 
+  background-size:100%;
+  min-height: 400px!important;
+  border-bottom: solid black 2px;
+ 
+
+}
+
+.groupcontent{
+  margin: 0 0;
+  padding: 0 0 !important;
+  width: 100%!important;
+  
+}
 
 
 
