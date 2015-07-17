@@ -6,35 +6,59 @@
 </p> -->
 
 
+<div class="row">
+  <div class="span9">
+    
+      <strong>Event:</strong>
+      <%= @event.name %>
+   
+    <div class="row">
+      <div class="col-md-4">
+       
+        <strong>Status:</strong>
+        <% if @event.start_date.present? %>
+          <% if @event.start_date.past? %>
+            <%= 'Event has finished' %>
+            <% else %>
+            <%= 'Event is coming up' %>
+            <% end %>
+          <% else %>
+          <%= 'Event has not date' %>
+          <% end %>
+
+        
+      </div>
+      <div class="col-md-2">
+       
+        <strong>Host:</strong>
+        <% host = User.find(@event.host_id).name %> 
+        <%= host %>
+
+   
+      
+       
+      </div>
+
+      <div class="col-md-2">
+
+        <strong>Date:</strong>
+        <%= @event.start_date.to_date %>
+
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 
 
-<p>
-  <strong>Event:</strong>
-  <%= @event.name %>
-</p>
 
-<p>
-<strong>Status:</strong>
-<% if @event.start_date.present? %>
-  <% if @event.start_date.past? %>
-    <%= 'Event has finished' %>
-    <% else %>
-    <%= 'Event is coming up' %>
-    <% end %>
-  <% else %>
-  <%= 'Event has not date' %>
-  <% end %>
 
-</p>
 
-<p>
-  <strong>Host:</strong>
-  <% host = User.find(@event.host_id).name %> 
-  <%= host %>
-</p>
 
+
+<div class="eventinfo">
 <p>
   <strong>Event description:</strong>
   <%= @event.event_description %>
@@ -45,10 +69,7 @@
 <p>
 
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date.to_date %>
-</p>
+
 
 <!-- <p>
   <strong>End date:</strong>
@@ -88,7 +109,7 @@
 
 <p>
 <div class="staravg">
-Current Rating: <%= rating_for @event, "Rating", stars:10, enable_half: true, disable_after_rate: true, imdb_avg: true  %>
+Rating: <%= rating_for @event, "Rating", stars:10, enable_half: true, disable_after_rate: true, imdb_avg: true  %>
 </div>
 </p>
 
@@ -98,3 +119,4 @@ Current Rating: <%= rating_for @event, "Rating", stars:10, enable_half: true, di
 
 <td><%= link_to 'Destroy', group_tournament_event_path(@group, @tournament, @event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
+</div>

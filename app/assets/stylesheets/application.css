@@ -115,14 +115,17 @@ left:0px;*/
 .content{
   font-family: futura;
   text-align: center;
-  font-size: 150%
+  font-size: 150%;
+  
+  
 }
 
 .content p{
   line-height: 200%;
   font-family: futura;
   text-align: center;
-  font-size: 150%
+  font-size: 150%;
+  
 }
 
 #notice{margin: 0px;}
