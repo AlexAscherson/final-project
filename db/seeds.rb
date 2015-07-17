@@ -64,19 +64,20 @@ alexstournament3 = Tournament.create! :creator_id => 1, :name => 'Pizza Making',
 
 
 # ........EVENTS...........
-alstournyround1 = Event.create! :imageurl => "dinner1.jpg", :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'Guys so excited to be hosting first event!  Going to set the bar high so better be prepared!', :location =>'23 Elsworthy Road', :outcome => 5, :start_date => DateTime.parse("07/16/2015 8:00") 
-alstournyround2 = Event.create! :imageurl => "dinner3.jpg", :host_id => 2, :name => 'Dinner at Harrys house', :event_description => 'So I wasnt sure what to make or do, so Im falling back on a classic, Theme is jurassic park, you guys better dress up as im going to make all the insane food they had in the kitchen.' :tournament_id => 1, :location =>'23 Elsworthy Road', :outcome => 5, :start_date => DateTime.parse("07/17/2015 8:00") 
-alstournyround3 = Event.create! :imageurl => "dinner4.jpg", :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Not sure what to say here so im going to think about it and update it later.', :location =>'West London', :outcome => 7, :start_date => DateTime.parse("07/18/2015 8:00") 
-alstournyround4 = Event.create! :imageurl => "dinner5.jpg", :host_id => 4, :name => 'Dinner at Eds house', :event_description => 'Not sure what to say here so im going to think about it and update it later.', :location =>'West London', :outcome => 7, :start_date => DateTime.parse("07/19/2015 8:00") 
-alstournyround5 = Event.create! :imageurl => "dinner6.jpg", :host_id => 5, :name => 'Dinner at Remes house', :event_description => 'I promise nothing except steak and whiskey.  Sam..will probably be Fetching and cook the steak and whiskey.', :location =>'South London', :outcome => 7, :start_date => DateTime.parse("07/20/2015 8:00") 
+alstournyround1 = Event.create! :imageurl => "dinner1.jpg", :host_id => 1, :name => 'Dinner at Alexs house', :event_description => 'Guys so excited to be hosting first event!  Going to set the bar high so better be prepared!', :location =>'23 Elsworthy Road', :outcome => 5, :start_date => DateTime.new(07/16/2015) 
+alstournyround2 = Event.create! :imageurl => "dinner3.jpg", :host_id => 2, :name => 'Dinner at Harrys house', :event_description => 'So I wasnt sure what to make or do, so Im falling back on a classic, Theme is jurassic park, you guys better dress up as im going to make all the insane food they had in the kitchen.', :location =>'23 Elsworthy Road', :outcome => 5, :start_date => DateTime.new(07/17/2015) 
+alstournyround3 = Event.create! :imageurl => "dinner4.jpg", :host_id => 3, :name => 'Dinner at Zoes house', :event_description => 'Not sure what to say here so im going to think about it and update it later.', :location =>'West London', :outcome => 7, :start_date => DateTime.new(07/18/2015) 
+alstournyround4 = Event.create! :imageurl => "dinner5.jpg", :host_id => 4, :name => 'Dinner at Eds house', :event_description => 'Not sure what to say here so im going to think about it and update it later.', :location =>'West London', :outcome => 7, :start_date => DateTime.new(07/19/2015) 
+alstournyround5 = Event.create! :imageurl => "dinner6.jpg", :host_id => 5, :name => 'Dinner at Remes house', :event_description => 'I promise nothing except steak and whiskey.  Sam..will probably be Fetching and cook the steak and whiskey.', :location =>'South London', :outcome => 7, :start_date => DateTime.new(07/20/2015) 
 
-alexsgroup.tournaments << alstournyround1 << alstournyround2 << alstournyround3 << alstournyround4 << alstournyround5
+alexsgroup.tournaments << alexstournament << alexstournament2 << alexstournament3
+alexstournament.events << alstournyround1 << alstournyround2 << alstournyround3 << alstournyround4 << alstournyround5
 
-alexsgroup.users << Users.all
+# alexsgroup.users << Users.all
 zoesgroup.users << alex << harry
 harrysgroup.users << alex << zoe
 
-alexstournament << Users.all
+# alexstournament << Users.all
 
 alstournyround1.users << alex << harry << remes << zoe << grouse
 alstournyround2.users << alex << harry << remes << zoe << grouse
