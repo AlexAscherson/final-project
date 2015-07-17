@@ -383,6 +383,7 @@ li a:hover{
   width: 100%;
   // display: inline-block;
   background-color:#d6f1ec;
+  margin-bottom: 0px;
 
 }
 
@@ -454,6 +455,7 @@ li a:hover{
   background-size:100%;
   min-height: 400px!important;
   border-bottom: solid black 2px;
+  border-right: solid black 2px;
  
 
 }
@@ -463,6 +465,40 @@ li a:hover{
   padding: 0 0 !important;
   width: 100%!important;
   
+}
+
+.event_big{
+  width: 100%;
+  height: 100%;
+}
+
+.eventhead{
+  background:bisque;
+  font-family: futura;
+  font-size: 25px;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+}
+
+
+
+
+.eventviewer h3{
+  background:seagreen;
+  padding:20px;
+  margin:0px;
+  border-bottom: solid black 2px;
+}
+
+.eventviewer li{
+  padding: 0px;
+  border-bottom: solid black 2px;
+  & .eventdescription{
+    padding:20px!important;
+    font-family: futura;
+    font-size: 20px;
+
+  }
 }
 
 

@@ -1,12 +1,24 @@
+<div class="eventviewer">
+  <h3>Events</h3>
+  <ul>
+    <% @tournament.events.each do | event | %>
+     <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
+      <li>
+        <div class="eventhead">
+        <%= event.name %> 
+        </div>
+        <div class="eventbigimg">
+        <% eventimg = event.imageurl %> 
+        <%= image_tag(eventimg, :alt => "rss feed", :class => "event_big") %>
+        </div>
+        
+        <div class="eventdescription">
+        <%= event.event_description %> 
+        </div>
+        
 
-        <ul>
-          <% @tournament.events.each do | event | %>
-            <li>
-              <% eventimg = event.imageurl %> 
-              <%= image_tag(eventimg, :alt => "rss feed", :class => "event_thumb") %>
-              <%= event.name %> 
-
-              </li>
-          <% end %>
-        </ul>
-    
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>  
