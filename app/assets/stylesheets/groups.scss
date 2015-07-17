@@ -6,10 +6,15 @@
   background: url(http://www.confessionsofachocoholic.com/wp-content/uploads/2012/09/chile-olive-oil-dinner-party2.jpg) no-repeat center center; 
   margin: 0 0;
   color: white;
-
+  
   background-size: cover;
 }
 
+.imagegreyer{
+background:rgba(54, 25, 25, 0.5);
+margin: 0px;
+padding:0px;
+}
 
 
 
@@ -446,7 +451,7 @@ li a:hover{
 }
 
 .col-md-2{
-  margin-left: 2px!important;
+  margin-left: 2px;
 }
 
 .groupcol2{
