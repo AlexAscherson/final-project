@@ -35,19 +35,24 @@ padding:0px;
   padding: 10px;
   margin-top: 20px !important;
   color:white;
+  & a:visited{
+    color: white;
+  }
 }
-
 
 .buttonsbox{
   float: right;
   display: inline-block;
-  width: 25%;
+  // width: 25%;
   margin-right: 0px;
   padding-right:0px;
   background: rgba(54, 25, 25, 0.5);
    & a{
     color: white;
   }
+  div{
+    margin:0px;
+  } 
 
   
 }
@@ -55,7 +60,6 @@ padding:0px;
   // background-color: #058496;
   width: 100%;
   padding: 10px;
-  margin-top: 20px !important;
   color: white;
 }
 
@@ -247,7 +251,7 @@ li:hover {
   }
 
   .group_members_top ul{
-    height: 150px;
+    // height: 150px;
     text-align: center;
   }
 
@@ -440,6 +444,7 @@ li a:hover{
 
 .membersheader{
   margin: 0px;
+  border-top: solid black 2px;
    background: rgb(54, 25, 25); /* Fall-back for browsers that don't
                                     support rgba */
   background: rgba(54, 25, 25, .5);
@@ -481,8 +486,8 @@ li a:hover{
   background:bisque;
   font-family: futura;
   font-size: 25px;
-  padding-top: 10px!important;
-  padding-bottom: 10px!important;
+  padding-top: 20px!important;
+  padding-bottom: 20px!important;
 }
 
 
@@ -507,4 +512,36 @@ li a:hover{
 }
 
 
+.buttonslider{
+  width: 20px;
+  height: 100%;
+  display: block;
+  float: left;
+  background: black;
+  margin-left:0px;
 
+}
+
+.fliparrow {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    
+}
+
+.buttondiv{
+  text-align: right;
+  margin-right:0px;
+  width: 80%;
+
+}
+
+.editgroup{
+  margin-right: 0px; 
+  margin-bottom:20px;
+  float: left;
+  padding:10px;
+  padding-top: 0px;
+}
+
+li .jointournament{margin-top:0px!important;}

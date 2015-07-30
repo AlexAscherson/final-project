@@ -1,6 +1,7 @@
 <div class="eventviewer">
   <h3>Events</h3>
   <ul>
+    <% if @tournament.events.present? %>
     <% @tournament.events.each do | event | %>
      <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
       <li>
@@ -15,10 +16,16 @@
         <div class="eventdescription">
         <%= event.event_description %> 
         </div>
+
+        
+
         
 
         </li>
       <% end %>
+    <% end %>
+    <% else %><br><br><br>
+    <h2>No events yet for this tournament.</h2>
     <% end %>
   </ul>
 </div>  

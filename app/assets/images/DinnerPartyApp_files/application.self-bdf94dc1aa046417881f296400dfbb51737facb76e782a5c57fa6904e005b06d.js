@@ -10,16 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-//= require jquery.raty
-//= require ratyrate
+
+
+
+
+
+
 
 $(document).ready(function() {
-
-  console.log("app.js loaded");
   
  $( ".group_members_top" ).click(function() {
   $( ".slider" ).slideToggle( "slow", function() {
@@ -29,13 +27,6 @@ $(document).ready(function() {
 
  $( ".buttonslider" ).click(function() {
   $( ".buttondiv" ).animate({ width: "toggle"} )
-  console.log("slider clicked");
-});
-
-
-$('.buttonslider').click(function() {
-    $(".arrow").toggleClass('fliparrow');
-    console.log("arrow flipped");
 });
 
 

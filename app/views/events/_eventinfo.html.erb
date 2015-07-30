@@ -10,11 +10,38 @@
   <div class="span9">
     
       <h3>Event:
-      <%= @event.name %></h3>
+      <%= @event.name %>
+      <div class="inlinejoinbutton">
+        <div class="joinevent">
+          <% if @event.users.exists?(current_user.id) %>
+             <%= button_to 'Leave Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>
+            <% else %>
+              <%= button_to 'Join Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>    
+              <% end > %>
+        </div>
+      </div>
+      </h3>
+
+
    
     <div class="row">
-      <div class="col-md-4">
-       
+
+
+    <div class="col-md-2">
+        
+        <% profileimg = User.find(@event.host_id).profile_image_url %> 
+        <%= image_tag(profileimg, :alt => "rss feed", :class => "circularprofilepic") %><br>
+        <strong>Host:</strong>
+        <% host = User.find(@event.host_id).name %> 
+        <%= host %>
+
+      </div>
+
+
+
+
+      <div class="col-md-4">  
+      <div class="infowrap">
         <strong>Status:</strong>
         <% if @event.start_date.present? %>
           <% if @event.start_date.past? %>
@@ -26,23 +53,16 @@
           <%= 'Event has not date' %>
           <% end %>
 
-        
-      </div>
-      <div class="col-md-2">
-       
-        <strong>Host:</strong>
-        <% host = User.find(@event.host_id).name %> 
-        <%= host %>
-
-   
-      
-       
-      </div>
-
-      <div class="col-md-2">
-
         <strong>Date:</strong>
         <%= @event.start_date.to_date %>
+
+
+      </div>
+
+      </div>      
+      <div class="col-md-2">
+
+        
 
       </div>
 
@@ -51,7 +71,12 @@
 </div>
 
 
-
+<div class="group_members_top">
+            Guests
+              <div class="membersheader">
+                <%= render 'eventusers' %>
+              </div>
+            </div>
 
 
 

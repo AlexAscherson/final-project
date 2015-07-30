@@ -5,66 +5,65 @@
 </style>
 
 <div class="image_show_top">
+    <div class="imagegreyer">
 
-  <div class="buttonsbox">
+    <div class="buttonsbox">
+    <div class="buttonslider">
+    <%= image_tag("arrow.png", size:"25", :alt => "rss feed", :class => "arrow") %>
 
-    <div class="joinevent">
-      <% if @event.users.exists?(current_user.id) %>
-         <%= button_to 'Leave Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>
-        <% else %>
-          <%= button_to 'Join Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>    
-          <% end > %>
     </div>
-  </div>  
+    <div class="buttondiv">
 
-
-  <div class="image_show_top_text">
-    <p>
-      <strong>Name:</strong>
-      <%= @event.name %>
-
-    </p>
-    <p><%= @event.event_description %></p>
-    <p>NEXT EVENT:<p>
-    </div>
-
-      
-  <div class="tournamentsbar">
-    <div class="group_members_top">
-    Guests
-      <div class="membersheader">
-      <%= render 'eventusers' %>
+      <div class="joinevent">
+        <% if @event.users.exists?(current_user.id) %>
+           <%= button_to 'Leave Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>
+          <% else %>
+            <%= button_to 'Join Event', joinevent_group_tournament_event_path, :class =>"btn btn-primary btn-lg", id: "joinevent",  remote: true, method: :post %>    
+            <% end > %>
       </div>
+
+
+      </div>
+    </div>  
+
+
+    <div class="image_show_top_text">
+      <p>
+        <strong>Name:</strong>
+        <%= @event.name %>
+
+      </p>
+      <p><%= @event.event_description %></p>
+     
+      </div>
+
+        
+    
+   
+ 
     </div>
-  </div>
 
 </div>
-
- 
-
-
-
-
-
 
 
 <div class="container eventcontent">
     <div class="row">
-        <div class="col-md-2">
-             
-          <div class="eventscol1">   
-          <%= render 'otherevents' %> 
+
+     <div class="col-md-10">          
+          <div class='content'>
+            <%= render 'eventinfo' %> 
+            
           </div>
-        
+        </div>
+
+      <div class="col-md-2">
+           
+        <div class="eventscol1">   
+        <%= render 'otherevents' %> 
+        </div>
       </div>
 
-        <div class="col-md-10">
-          
-          <div class='content'>
-          <%= render 'eventinfo' %> 
-          </div>
-
-        </div>
+      
     </div>
 </div>
 

@@ -10,77 +10,87 @@
     
     <div class="buttonsbox">
 
-    <div class="joingroup">
-    <% if @group.users.exists?(current_user.id) %>
-       <%= button_to 'Leave group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post %>
-      <% else %>
-        <%= button_to 'Join group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post %>    
-        <% end > %>
+    <div class="buttonslider">
+    <%= image_tag("arrow.png", size:"25", :alt => "rss feed", :class => "arrow") %>
+
     </div>
+    <div class="buttondiv">
 
-
-
-    
-    <!-- this is the new tournament button -->
-
-    <div class="createnewtourn">
-
-     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tourncreatemodal">New Tournament</button>
+      <div class="joingroup">
+      <% if @group.users.exists?(current_user.id) %>
+         <%= button_to 'Leave group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post %>
+        <% else %>
+          <%= button_to 'Join group', ajax_group_path, :class =>"btn btn-primary btn-lg", id: "ajax",  remote: true, method: :post %>    
+          <% end > %>
       </div>
 
-      <%= form_for [@group, @tournament] do |f| %>
-        <div class="modal fade" id="tourncreatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content" style='color:black;'>
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Create Tournament</h4>
-            </div>
 
-            <div class="modal-body">
-              <%= render '/tournaments/form' %>
-            </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <%= submit_tag "Create", class: "btn btn-primary" %>
+
+
+      
+      <!-- this is the new tournament button -->
+
+      <div class="createnewtourn">
+
+       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tourncreatemodal">New Tournament</button>
+        </div>
+
+        <%= form_for [@group, @tournament] do |f| %>
+          <div class="modal fade" id="tourncreatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content" style='color:black;'>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create Tournament</h4>
+              </div>
+
+              <div class="modal-body">
+                <%= render '/tournaments/form' %>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <%= submit_tag "Create", class: "btn btn-primary" %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <% end %>
+        <% end %>
 
 
-    <!-- This is the edit button -->
+      <!-- This is the edit button -->
 
-    <div class="editgroup">
+      <div class="editgroup">
 
-     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Edit Group</button>
-      </div>
+       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Edit Group</button>
+        </div>
 
-      <%= form_for(@group) do |f| %>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content" style='color:black;'>
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Edit Group</h4>
-            </div>
+        <%= form_for(@group) do |f| %>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content" style='color:black;'>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edit Group</h4>
+              </div>
 
-            <div class="modal-body">
-              <%= render 'form' %>
-            </div>
+              <div class="modal-body">
+                <%= render 'form' %>
+              </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <%= submit_tag "Update", class: "btn btn-primary" %>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <%= submit_tag "Update", class: "btn btn-primary" %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <% end %>
-      <!-- button box close -->
-      </div>
+        <% end %>
+        <!-- button box close -->
+        </div>
+
+     </div>
 
      
 
@@ -92,7 +102,7 @@
         <%= @group.name %>
       </p>
       <p><%= @group.group_description %></p>
-      <p>NEXT EVENT:<p>
+      
       </div>
 
       <div class="tournamentsbar">
@@ -131,13 +141,5 @@
 
 
 
-<div class="grouptournaments">
-     
-<%= render 'groupcontent' %>
 
 
-<div class="contentwrap">
-
-<p id="notice"><%= notice %></p>
-
-</div></div>
