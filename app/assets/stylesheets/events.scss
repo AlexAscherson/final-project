@@ -112,9 +112,16 @@
 .tournament_thumb{margin-left:5px; margin-right: 0px;}
 
 .eventinfo{
-  padding-top:75px!important;
   background-color: white;
+
+  .eventdescription{
+  padding-top:75px!important;
+  border-bottom: solid black 2px;
+
+  }
 }
+
+
 
 .inlinejoinbutton{
   display:inline-block;
@@ -135,6 +142,12 @@
 
 .infowrap{
   text-align: left;
+}
+
+.infoheader{
+  width: 100%;
+  border-bottom: solid black 2px;
+  background-color: rgb(214, 241, 236);
 }
 
 .slider{border-bottom: solid black 2px;}

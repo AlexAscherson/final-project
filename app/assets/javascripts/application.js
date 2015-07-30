@@ -16,6 +16,8 @@
 //= require_tree .
 //= require jquery.raty
 //= require ratyrate
+//= require underscore
+//= require gmaps/google
 
 $(document).ready(function() {
 
@@ -36,6 +38,18 @@ $(document).ready(function() {
 $('.buttonslider').click(function() {
     $(".arrow").toggleClass('fliparrow');
     console.log("arrow flipped");
+});
+
+$('.mapheader').click(function() {
+    $("#map").animate({ height: "toggle"} )
+    // Animation complete.
+  
+});
+
+$('.infoheader').click(function() {
+    $(".eventdescription").animate({ height: "toggle"} )
+    // Animation complete.
+  
 });
 
 

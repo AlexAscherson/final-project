@@ -1,6 +1,9 @@
 class EventsController < ApplicationController
+  
+
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  
 
   def joinevent
     @group = Group.find(params['group_id'])
@@ -36,6 +39,7 @@ class EventsController < ApplicationController
       format.js
       format.html
     end
+    
   end
 
   # GET /events/new

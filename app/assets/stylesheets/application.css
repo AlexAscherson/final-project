@@ -154,3 +154,10 @@ padding: 0 0;}
 .hide{
   display: :none;
 }
+
+.mapheader{
+  width: 100%;
+  border-bottom: solid black 2px;
+  background-color: rgb(214, 241, 236);
+}
+
