@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery.raty
-//= require ratyrate
 //= require underscore
 //= require gmaps/google
+//= require jquery.raty
+//= require ratyrate
 
 $(document).ready(function() {
 
@@ -51,6 +51,8 @@ $('.infoheader').click(function() {
     // Animation complete.
   
 });
+
+
 
 
 });

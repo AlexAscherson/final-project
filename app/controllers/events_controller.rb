@@ -39,7 +39,7 @@ class EventsController < ApplicationController
       format.js
       format.html
     end
-    
+    @ratings = @event.rates("Rating")
   end
 
   # GET /events/new

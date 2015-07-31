@@ -1,0 +1,13 @@
+<% users = @event.users.count %>
+              <% ratings = @ratings.count %>
+              <% if users == ratings %>
+                All votes are in!
+                <% @event.outcome = 1 %>
+                <% @event.save %>
+              <% else %>
+              <strong>Voting:</strong>
+              <%= ratings %> / <%= users %>
+              guests have voted.  
+              <% end %>
+
+              
