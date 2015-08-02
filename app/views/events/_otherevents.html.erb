@@ -28,10 +28,10 @@
  <% @tournament.events.each_with_index do | event, index | %>
     <li> 
       
-      <%= link_to group_tournament_event_path(@group, @tournament, event), id:"show", remote: true, method: :get do %>
+      <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
       <div>  
           Round <%= index + 1 %>: <%= event.name %><br>
-          <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
+          <%= image_tag(event.imageurl, :class => "event_thumb") %>
         </div>
 
 

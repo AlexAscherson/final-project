@@ -57,6 +57,7 @@ class TournamentsController < ApplicationController
       if @tournament.save
         format.html { redirect_to group_tournament_path(@group, @tournament), notice: 'Tournament was successfully created.' }
         format.json { render :show, status: :created, location: @tournament }
+        @tournament.users << current_user
       else
         format.html { render :new }
         format.json { render json: @tournament.errors, status: :unprocessable_entity }
