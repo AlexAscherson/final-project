@@ -29,10 +29,13 @@ class TournamentsController < ApplicationController
   def show
     @group = Group.find(params['group_id'])
     @event = Event.new
+    @tournament = Tournament.find(params[:id])
     respond_to do | format |
       format.js
       format.html
     end
+    session[:group] = @group.id
+    session[:tournament] = @tournament.id
   end
 
   # GET /tournaments/new

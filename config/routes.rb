@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   post '/rate' => 'rater#create', :as => 'rate'
   devise_for :users
+  resources :charges do
+  get '/charges', to: redirect('/posts')
+  end
 
   resources :groups do 
     member do 

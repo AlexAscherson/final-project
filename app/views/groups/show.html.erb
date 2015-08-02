@@ -10,10 +10,10 @@
     
     <div class="buttonsbox">
 
-    <div class="buttonslider">
-    <%= image_tag("arrow.png", size:"25", :alt => "rss feed", :class => "arrow") %>
+      <div class="buttonslider">
+      <%= image_tag("arrow.png", size:"25", :alt => "rss feed", :class => "arrow") %>
 
-    </div>
+      </div>
     <div class="buttondiv">
 
       <div class="joingroup">
@@ -24,11 +24,6 @@
           <% end > %>
       </div>
 
-
-
-
-
-      
       <!-- this is the new tournament button -->
 
       <div class="createnewtourn">
@@ -36,8 +31,8 @@
        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tourncreatemodal">New Tournament</button>
         </div>
 
-        <%= form_for [@group, @tournament] do |f| %>
-          <div class="modal fade" id="tourncreatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <%= form_for [@group, @tournament] do |f| %>
+        <div class="modal fade" id="tourncreatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content" style='color:black;'>
               <div class="modal-header">
@@ -54,9 +49,9 @@
                 <%= submit_tag "Create", class: "btn btn-primary" %>
               </div>
             </div>
-          </div>
-        </div>
-        <% end %>
+         </div>
+       </div>
+      <% end %>
 
 
       <!-- This is the edit button -->
@@ -92,10 +87,6 @@
 
      </div>
 
-     
-
-
-
     <div class="image_show_top_text">
       <p>
         <strong>Name:</strong>
@@ -112,18 +103,12 @@
       </div>
     </div>
 
-  </div>
+</div>
 
 
   <div class="container groupcontent">
       <div class="row">
-          <div class="col-md-2">
-               
-            <div class="groupscol1">   
-            <%= render 'tournamentlist' %> 
-            </div>
           
-          </div>
 
           <div class="groupcol2 col-md-10">
             
@@ -133,6 +118,16 @@
             </div>
 
           </div>
+
+          <div class="col-md-2">
+               
+            <div class="groupscol1">   
+            <%= render 'tournamentlist' %> 
+            </div>
+          
+          </div>
+
+
       </div>
     </div>
 </div>

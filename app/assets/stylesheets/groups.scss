@@ -271,6 +271,7 @@ li:hover {
         list-style-type: none;
         padding-bottom: 0px;
         display:inline-block
+
       }
     }
   }
@@ -284,11 +285,7 @@ li:hover {
     margin-right:0px;
   }
 
-   .tournament_thumb{
-    height: 150px;
-    width: 300px!important;
-    
-  }
+   
 
 
 
@@ -342,6 +339,7 @@ display: inline;}
     font-family: futura;
     font-size:20px;
     text-align: center;
+    
 
 }
 
@@ -386,7 +384,8 @@ display: inline;}
 
 .tournamentimage{
   margin: 0px;
-  width: 30%;
+  width: 100%;
+
 }
 
 .tournamentpreviewdescription{
@@ -408,17 +407,25 @@ li a:hover{
   // display: inline-block;
   background-color:#d6f1ec;
   margin-bottom: 0px;
+  .tournament_thumb{
+          height: 150px;
+          width: 100%!important;
+          margin: 0px!important;
+          border-bottom: solid black 2px;
+        }
 
 }
 
 .tournamentul li{
   // display: inline-block;
- 
+  
   margin: 0px;
-  padding: 5px;
+  padding: 0px;
   display: inline-block;
   text-align: center;
-  border-bottom: solid black 2px;
+  // border-bottom: solid black 2px;
+  // margin-top: -4px;
+
   &:first-child {
     width: 100%;
   }
@@ -427,12 +434,22 @@ li a:hover{
      height: 100%;
      line-height: 2;
   }
+  h3{
+    border-bottom: solid black 2px; 
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-bottom:5px;
+    padding-top:5px;color:white;
+    background-color: rgb(36, 85, 128);
+    border-top: solid black 2px;
+  }
 }
 
 
 
 .sidebarwrap{
   width: 100%!important;
+  margin: 0px;
 }
 
 .sidebarwrap div{
@@ -470,17 +487,15 @@ li a:hover{
   border-top: 1px;
 }
 
-.col-md-2{
-  margin-left: 2px;
-}
+
 
 .groupcol2{
   width: 73.84%!important;
-  background: url("background.jpg") no-repeat center; 
+  // background: url("background.jpg") no-repeat center; 
   background-size:100%;
   min-height: 400px!important;
   border-bottom: solid black 2px;
-  border-right: solid black 2px;
+  border-right: solid black 1px;
  
 
 }
@@ -489,7 +504,11 @@ li a:hover{
   margin: 0 0;
   padding: 0 0 !important;
   width: 100%!important;
-  
+  .col-md-2{
+  // margin-left: 2px;
+  width: 26.15%!important;
+
+}
 }
 
 .event_big{
@@ -559,4 +578,4 @@ li a:hover{
   padding-top: 0px;
 }
 
-li .jointournament{margin-top:0px!important;}
+li .jointournament{margin-top:0px!important;padding-top:10px;padding-bottom:10px;}

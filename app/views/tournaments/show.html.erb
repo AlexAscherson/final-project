@@ -106,6 +106,9 @@
   <div>
     <h3><%= @tournament.name %> Upcoming Events:</h3>
     </div>
+
+
+
   <ul class="eventlist">
       
 
@@ -166,58 +169,82 @@
           <% end %>
     </ul>
 
+<div class="container groupcontent">
+      <div class="row">          
 
-  <p>
-    <strong>Tournament Name:</strong>
-    <%= @tournament.name %>
-  </p>
-  
-   <div class="tournamentpreviewsprize">
-                <% stake = @tournament.users.count * @tournament.stake %>
+        <div class="groupcol2 col-md-10">
+                  
+                 <!-- col1 -->
 
-                 Prize Pool: £<%=stake%>
-                </div>
+          <p>
+            <strong>Tournament Name:</strong>
+            <%= @tournament.name %>
+          </p>
+          
+           <div class="tournamentpreviewsprize">
+                        <% stake = @tournament.users.count * @tournament.stake %>
 
-  <p>
-    <strong>Group:</strong>
-    
-    <% group = Group.find(@tournament.group_id).name %> 
-    <%= group %>
-  </p>
-    
+                         Prize Pool: £<%=stake%>
+                        </div>
 
-  <p>
-    <strong>Creator:</strong>
-    <% creator = User.find(@tournament.creator_id).name %> 
-    <%= creator %>
-  </p>
+          <p>
+            <strong>Group:</strong>
+            
+            <% group = Group.find(@tournament.group_id).name %> 
+            <%= group %>
+          </p>
+            
 
-  <p>
-    <strong>Tournament description:</strong>
-    <%= @tournament.tournament_description %>
-  </p>
+          <p>
+            <strong>Creator:</strong>
+            <% creator = User.find(@tournament.creator_id).name %> 
+            <%= creator %>
+          </p>
 
- <!--  <p>
-    <strong>User:</strong>
-    <%= @tournament.user_id %>
-  </p> -->
+          <p>
+            <strong>Tournament description:</strong>
+            <%= @tournament.tournament_description %>
+          </p>
 
-  <!-- <p>
-    <strong>Start date:</strong>
-    <%= @tournament.start_date %>
-  </p>
+         <!--  <p>
+            <strong>User:</strong>
+            <%= @tournament.user_id %>
+          </p> -->
 
-  <p>
-    <strong>End date:</strong>
-    <%= @tournament.end_date %>
-  </p>
- -->
-  
+          <!-- <p>
+            <strong>Start date:</strong>
+            <%= @tournament.start_date %>
+          </p>
+
+          <p>
+            <strong>End date:</strong>
+            <%= @tournament.end_date %>
+          </p>
+         -->
+          
 
 
-  <li> <%= link_to('Edit', edit_group_tournament_path(@group, @tournament)) %> </li>
-    <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
+          <li> <%= link_to('Edit', edit_group_tournament_path(@group, @tournament)) %> </li>
+            <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
 
-</div>
+        </div>
+
+        </div>
+
+        <div class="col-md-2">
+             
+          <div class="groupscol1">   
+          <%= render :partial => 'events/otherevents' %> 
+          </div>
+        
+        </div>
+
+      </div>
+    </div>
+
+
+
+new charge here:
+<%= render "./charges/newcharge" %>
 
 
