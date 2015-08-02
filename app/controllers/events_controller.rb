@@ -16,6 +16,7 @@ class EventsController < ApplicationController
       @event.users.delete(current_user)
     else
       @event.users << current_user
+      @tournament.users << current_user
     end
     respond_to do | format |
       format.js

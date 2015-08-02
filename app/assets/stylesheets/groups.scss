@@ -248,17 +248,17 @@ li:hover {
     padding-bottom: 0px;
     padding-top:0px;
 
-  }
+    ul{
+      // height: 150px;
+      text-align: center;
+    
 
-  .group_members_top ul{
-    // height: 150px;
-    text-align: center;
-  }
-
-  .group_members_top li{
-    list-style-type: none;
-    padding-bottom: 0px;
-    display:inline-block
+      li{
+        list-style-type: none;
+        padding-bottom: 0px;
+        display:inline-block
+      }
+    }
   }
 
   .profile_thumb{
@@ -445,7 +445,7 @@ li a:hover{
 .membersheader{
   margin: 0px;
   border-top: solid black 2px;
-   background: rgb(54, 25, 25); /* Fall-back for browsers that don't
+     background: rgb(54, 25, 25); /* Fall-back for browsers that don't
                                     support rgba */
   background: rgba(54, 25, 25, .5);
 };
