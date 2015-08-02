@@ -69,12 +69,30 @@
           </div>
 
         </div>  
-
+        
         <div class="col-md-2">
-          Rating:
-          <div class="staravg1">
-           <%= rating_for @event, "Rating", stars:10, enable_half: true, disable_after_rate: true, imdb_avg: true  %>
-          </div>
+
+
+     
+        <% @ratings.each do | rating | %>
+          <% if current_user.id == rating.rater_id %>
+          <% @rated = 1 %>
+          <% @ratedevent = rating %>
+          <% else %>
+          <% end %>
+        <% end %>
+        
+        <% if @rated != 1 %>
+         Rating:
+                  <div class="staravg1">
+                   <%= rating_for @event, "Rating", stars:10, enable_half: true, disable_after_rate: true, imdb_avg: true  %>
+                  </div>
+        <% else %>
+        You rated this event: <%= (@ratedevent.stars).round(1) %>
+        <% end %>
+     
+
+          
 
         </div>
 
