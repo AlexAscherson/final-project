@@ -1,21 +1,36 @@
 <div class="eventsidebartop">
-
-  
   <!-- <p>
     <strong>Group:</strong>
     <%= link_to(@group.name, group_path(@group)) %>
   </p> -->
-  <h3><%= link_to(@tournament.name, group_tournament_path(@group, @tournament)) %> Tournament</h3>
+  <h3><%= link_to(@tournament.name, group_tournament_path(@group, @tournament)) %> Tournament
+  </h3>
   
 
-  <div class="stakes">
-    Stake to enter: £<%= @tournament.stake %><br>
-    Rounds: <%= @tournament.events.count %><br>
-    <% stake = @tournament.users.count * @tournament.stake %>
-    Prize Pool: £<%=stake%>
-    Pay Stake: 
+  <% if @tournament.users.where(:id => current_user.id).blank? %>
+    <div class="stakes">
+    <p>
+    Rounds: <%= @tournament.events.count %></p>
+    <p><% stake = @tournament.users.count * @tournament.stake %>
+    Prize Pool: £<%=stake%></p>
+    <%= render "./charges/newcharge" %>
+    
+    </div> 
+  <% else %>
+    <div class="stakes">
+      <p>
+      Rounds: <%= @tournament.events.count %></p>
+      <p><% stake = @tournament.users.count * @tournament.stake %>
+      Prize Pool: £<%=stake%></p><br>
+      Current Leader:<br>
 
-  </div>
+      <% nextevent = @tournament.events.where('start_date >= ?', Date.today).order(start_date: :desc) %>
+      Next Event: <%= nextevent.first.name %>
+      <br>
+
+      <%= "You have paid the Stake and are enrolled in this tournament" %>
+     </div>
+  <% end %>
 
 </div>
 
@@ -24,20 +39,20 @@
 <div class="title">
   Events
 </div>
+
+<!-- Event Sidebare UL -->
 <ul class="othereventlist">
 
- <% @tournament.events.each_with_index do | event, index | %>
+ <% @tournament.events.latestevent.each_with_index do | event, index | %>
     <li> 
-      
-      <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
+      <!-- Linked LIs with title and image of event -->
+      <%= link_to group_tournament_event_path(@group, @tournament, event), method: :get  do %>
       <div>
         <div id="eventtitle"class="eventlititle">  
           Round <%= index + 1 %>: <%= event.name %>
-          </div>
+         </div>
           <%= image_tag(event.imageurl, :class => "event_thumb") %>
         </div>
-
-
 
       <% end %>
     </li>

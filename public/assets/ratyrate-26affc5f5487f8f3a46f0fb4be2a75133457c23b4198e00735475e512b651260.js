@@ -3,7 +3,7 @@ $.fn.raty.defaults.halfShow = true;
 $.fn.raty.defaults.path = "/assets";
 $.fn.raty.defaults.cancel = false;
 
-$(document).on("ready page:load",function(){
+$(document).on("ready page:load",(function(){
   $(".star").each(function() {
     var $readonly = ($(this).attr('data-readonly') == 'true');
     var $half     = ($(this).attr('data-enable-half') == 'true');
@@ -40,7 +40,7 @@ $(document).on("ready page:load",function(){
       click: function(score, evt) {
         var _this = this;
         if (score == null) { score = 0; }
-        $.post('<%= Rails.application.class.routes.url_helpers.rate_path %>',
+        $.post('/rate',
         {
           score: score,
           dimension: $(this).attr('data-dimension'),

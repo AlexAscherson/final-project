@@ -1,0 +1,1114 @@
+/* line 5, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.image_show_top_text {
+  margin-bottom: 0px;
+}
+
+/* line 7, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.joinevent {
+  width: 100%;
+  padding: 10px;
+  color: white;
+}
+
+/* line 14, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.joinevent a {
+  width: 100%;
+  padding: 10px;
+  color: white;
+}
+
+/* line 28, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.container {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 33, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.container div {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 39, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.col-md-2 {
+  width: 26.15% !important;
+}
+
+/* line 42, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.col-md-10 {
+  width: 73.84% !important;
+  border-right: solid black 1px;
+}
+
+/* line 53, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.span9 {
+  color: white;
+  background-color: #245580;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+}
+/* line 59, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.span9 h3 {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
+  font-size: 35px !important;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* line 72, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventcontent {
+  margin: 0 0;
+  padding: 0 0 !important;
+  width: 100% !important;
+  background-size: 100%;
+}
+
+/* line 81, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventscol1 {
+  font-family: futura;
+  margin-left: 0px;
+  background-color: #245580;
+}
+
+/* line 90, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.othereventlist {
+  font-size: 15px;
+  overflow-x: auto;
+  margin-right: 0px;
+  background: white;
+  font-family: futura;
+}
+/* line 97, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.othereventlist li {
+  line-height: 2;
+  padding: 0px;
+  padding-left: 0px !important;
+  padding-bottom: 0px !important;
+  padding-right: 0px;
+  border: solid black 1px;
+  padding-bottom: 5px;
+  background-color: #d6f1ec;
+}
+/* line 106, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.othereventlist li li:hover ~ #eventtitle {
+  background-color: red !important;
+  color: white;
+}
+/* line 111, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.othereventlist li .eventlititle {
+  background-color: #9CAAC6;
+  line-height: 1.75;
+  padding: 0px;
+}
+/* line 115, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.othereventlist li img {
+  float: none;
+  border-top: solid black 2px;
+}
+
+/* line 125, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventlisttitle {
+  color: #CE0000;
+  background-color: #9CAAC6;
+}
+
+/* line 128, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventsidebartop {
+  background-color: white;
+  border: solid black 2px;
+  height: 222px;
+  border-bottom: 1px;
+}
+/* line 135, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventsidebartop h3 {
+  margin-top: 5px;
+  border-bottom: solid black 2px;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: #DEE7EF;
+  margin-top: 0px;
+}
+/* line 143, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventsidebartop a {
+  color: #245580;
+}
+/* line 144, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventsidebartop p {
+  border-bottom: solid black 2px;
+}
+/* line 145, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventsidebartop div {
+  margin-left: 0px;
+}
+
+/* line 149, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.event_thumb {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100% !important;
+  padding-top: 0px;
+  height: 150px;
+}
+
+/* line 151, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventinfo {
+  background-color: white;
+}
+/* line 154, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.eventinfo .eventdescription {
+  padding-top: 75px !important;
+  border-bottom: solid black 2px;
+}
+
+/* line 163, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.inlinejoinbutton {
+  display: inline-block;
+  float: right;
+  margin-right: 20px !important;
+}
+
+/* line 170, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.circularprofilepic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 180, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.infowrap {
+  text-align: left;
+}
+
+/* line 184, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.infoheader {
+  width: 100%;
+  border-bottom: solid black 2px;
+  background-color: #DEE7EF;
+}
+
+/* line 190, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.slider {
+  border-bottom: solid black 2px;
+  clear: both;
+  text-align: center;
+}
+/* line 191, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.slider ul li {
+  width: 120px;
+  float: left;
+}
+
+/* line 198, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.staravg1 {
+  display: inline-block !important;
+  text-align: center;
+}
+
+/* line 204, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/events.scss */
+.star {
+  background-image: url("/assets/big-star.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+/* line 4, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.top {
+  width: 100%;
+  background: url(http://www.confessionsofachocoholic.com/wp-content/uploads/2012/09/chile-olive-oil-dinner-party2.jpg) no-repeat center center;
+  margin: 0 0;
+  color: white;
+  background-size: cover;
+}
+
+/* line 13, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.imagegreyer {
+  background: rgba(54, 25, 25, 0.5);
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 21, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.toptext {
+  padding-top: 30%;
+  padding-bottom: 0%;
+  margin-top: -35%;
+  margin-bottom: 0px;
+  text-align: left;
+  font-size: 200%;
+  font-family: futura;
+  width: 100%;
+  margin-left: 0px;
+}
+/* line 32, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.toptext .textwrap {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+/* line 39, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.toptext .textwrap p {
+  margin-bottom: 0px;
+}
+
+/* line 46, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.createnew {
+  background-color: #058496;
+  width: 25%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+/* line 52, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.createnew a:visited {
+  color: white;
+}
+
+/* line 57, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.buttonsbox {
+  float: right;
+  display: inline-block;
+  margin-right: 0px;
+  padding-right: 0px;
+  background: rgba(54, 25, 25, 0.5);
+}
+/* line 64, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.buttonsbox a {
+  color: white;
+}
+/* line 67, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.buttonsbox div {
+  margin: 0px;
+}
+
+/* line 73, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.createnewtourn {
+  width: 100%;
+  padding: 10px;
+  color: white;
+}
+
+/* line 80, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.ajax {
+  background-color: #058496;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+
+/* line 89, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.joingroup {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+
+/* line 98, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.toptext p {
+  padding: 20px;
+  font-size: 50px;
+}
+
+/* line 105, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.mid1 {
+  width: 100%;
+  margin: 0 0;
+  color: white;
+  background-color: #058496;
+}
+
+/* line 112, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.mid1text {
+  height: 300px;
+}
+
+/* line 121, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.mid1text p {
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 25pt;
+  font-family: futura;
+  line-height: 1.5;
+}
+
+/* line 132, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.groupshome {
+  width: 100%;
+  background-color: white;
+  margin: 0px;
+}
+
+/* line 139, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.contentwrap {
+  text-align: center;
+  display: block;
+  float: middle;
+  width: 630px;
+  margin: 0 auto;
+}
+
+/* line 147, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.group_thumb {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 158, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.column1 {
+  width: 20%;
+  border: 1px solid black;
+  display: block;
+}
+
+/* line 164, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.column2 {
+  width: 70%;
+  border: 1px solid black;
+  display: inline block;
+}
+
+/* line 172, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 174, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+div {
+  margin: 20px;
+}
+
+/* line 178, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 183, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+/* line 187, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+/* line 192, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+/* line 196, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+/* line 202, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+/* line 207, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.groupshome {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  color: black;
+  padding-top: 10px;
+}
+
+/* line 216, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.grouplist {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding-top: 10px;
+}
+
+/* line 224, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.image_show_top {
+  width: 100%;
+  margin: 0 0;
+  color: white;
+  background-size: cover;
+}
+
+/* line 232, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.image_show_top_text {
+  padding-top: 15%;
+  padding-bottom: 15%;
+  margin-top: -35%;
+  text-align: left;
+}
+
+/* line 240, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.image_show_top_text p {
+  font-size: 50px;
+  font-family: futura;
+  line-height: 100%;
+}
+
+/* line 246, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentsbar {
+  width: 100%;
+  height: 100%;
+  margin: 0 0;
+  background: #361919;
+  /* Fall-back for browsers that don't
+       support rgba */
+  background: rgba(54, 25, 25, 0.5);
+  text-align: center;
+  padding-top: 0px;
+}
+
+/* line 257, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.group_members_top {
+  padding: 20px;
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  background-color: #DEE7EF;
+  border-bottom: solid black 2px;
+}
+/* line 267, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.group_members_top ul {
+  text-align: center;
+}
+/* line 272, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.group_members_top ul li {
+  list-style-type: none;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* line 281, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.profile_thumb {
+  height: 100px;
+  width: 100px;
+  padding-top: 10px;
+  padding-top: 0px;
+  margin: 0px !important;
+  margin-right: 0px;
+}
+
+/* line 296, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventlink {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 299, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.grouptournaments {
+  list-style-type: none;
+  display: inline;
+  margin: 0px !important;
+}
+
+/* line 308, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.grouptournaments li {
+  background-color: #d6f1ec;
+}
+
+/* line 312, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.grouptournaments li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+/* line 317, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.grouptournaments li div {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/* line 322, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.grouptournaments li div h3 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/* line 328, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventlist {
+  padding: 20px;
+  border: dotted 1px;
+  white-space: nowrap;
+  overflow-x: auto;
+  font-family: futura;
+  font-size: 80%;
+}
+
+/* line 338, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventlist li {
+  margin: 10px;
+  display: inline-block;
+  font-family: futura;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 348, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventlist li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+/* line 353, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventlist div {
+  margin: 0px;
+}
+
+/* line 359, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventlist img {
+  margin-top: 5px;
+  margin-right: 0px;
+}
+
+/* line 381, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentpreview {
+  height: 100%;
+}
+
+/* line 387, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentimage {
+  margin: 0px;
+  width: 100%;
+}
+
+/* line 393, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentpreviewdescription {
+  height: 100%;
+}
+
+/* line 397, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentpreviewscore {
+  float: left;
+}
+
+/* line 401, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+li a:hover {
+  color: black;
+}
+
+/* line 405, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentul {
+  list-style: none;
+  width: 100%;
+  background-color: #d6f1ec;
+  margin-bottom: 0px;
+}
+/* line 412, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentul .tournament_thumb {
+  height: 150px;
+  width: 100% !important;
+  margin: 0px !important;
+  border-bottom: solid black 2px;
+}
+
+/* line 421, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentul li {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  text-align: center;
+}
+/* line 431, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentul li:first-child {
+  width: 100%;
+}
+/* line 434, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentul li:last-child {
+  width: 100%;
+  height: 100%;
+  line-height: 2;
+}
+/* line 439, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentul li h3 {
+  border-bottom: solid black 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: white;
+  background-color: #245580;
+  border-top: solid black 2px;
+}
+
+/* line 452, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.sidebarwrap {
+  width: 100% !important;
+  margin: 0px;
+}
+
+/* line 457, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.sidebarwrap div {
+  display: inline-block;
+  width: 30% !important;
+}
+
+/* line 463, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentenroll {
+  background-color: #058496;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+
+/* line 471, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.tournamentenroll a {
+  background-color: #058496;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+
+/* line 479, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.membersheader {
+  margin: 0px;
+  background: #361919;
+  /* Fall-back for browsers that don't
+       support rgba */
+  background: rgba(54, 25, 25, 0.5);
+  border-bottom: solid black 0px;
+}
+/* line 485, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.membersheader li {
+  margin-top: 2px;
+}
+
+/* line 488, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.groupscol1 {
+  border: solid black 2px;
+  border-top: 1px;
+}
+
+/* line 495, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.groupcol2 {
+  width: 73.84% !important;
+  background-size: 100%;
+  min-height: 400px !important;
+  border-bottom: solid black 2px;
+  border-right: solid black 1px;
+}
+
+/* line 506, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.groupcontent {
+  margin: 0 0;
+  padding: 0 0 !important;
+  width: 100% !important;
+}
+/* line 510, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.groupcontent .col-md-2 {
+  width: 26.15% !important;
+}
+
+/* line 517, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.event_big {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 522, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventhead {
+  background: bisque;
+  font-family: futura;
+  font-size: 25px;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+/* line 533, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventviewer h3 {
+  background: seagreen;
+  padding: 20px;
+  margin: 0px;
+  border-bottom: solid black 2px;
+}
+
+/* line 540, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventviewer li {
+  padding: 0px;
+  border-bottom: solid black 2px;
+}
+/* line 543, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.eventviewer li .eventdescription {
+  padding: 20px !important;
+  font-family: futura;
+  font-size: 20px;
+}
+
+/* line 552, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.buttonslider {
+  width: 20px;
+  height: 100%;
+  display: block;
+  float: left;
+  background: black;
+  margin-left: 0px;
+}
+
+/* line 562, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.fliparrow {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* line 569, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.buttondiv {
+  text-align: right;
+  margin-right: 0px;
+  width: 80%;
+}
+
+/* line 576, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+.editgroup {
+  margin-right: 0px;
+  margin-bottom: 20px;
+  float: left;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+/* line 584, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/groups.scss */
+li .jointournament {
+  margin-top: 0px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 1, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 4, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/* line 8, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content .eventlist {
+  background-color: black;
+  color: white;
+}
+/* line 11, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content .eventlist a {
+  color: white;
+}
+/* line 12, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content .eventlist a:hover {
+  color: black;
+}
+/* line 15, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content .tournamentsidebar {
+  font-size: 14px;
+}
+/* line 18, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content .tournamentsidebartop p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+/* line 22, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.content h3 {
+  font-size: 18px;
+  margin-top: 0px;
+}
+
+/* line 29, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.jointournament {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+
+/* line 37, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.jointournament a {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: white;
+}
+
+/* line 45, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.createnewevent {
+  margin-top: 0px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+}
+/* line 51, /Users/MacBook/Desktop/WDI13/projects/dinner_party/dinner_party_app/app/assets/stylesheets/tournaments.scss */
+.createnewevent button {
+  float: left;
+  margin-bottom: 10px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+#bodywrap {
+  
+    display: block;
+    background-color: #9CAAC6;;
+    text-align: center;
+    margin: 0 auto;
+    /*width: 60%;*/
+    border: 2px solid black;
+
+ }
+
+ .contentwrap{
+  background-color: #d6f1ec;
+
+ }
+
+ #bodywrap div{
+    margin-top: 0px;
+ }
+
+  
+
+ .topimage img{
+  width:600px;
+  height: 200px;
+ }
+
+ .eventlink {
+  position: relative;
+ }
+
+ .eventlink span {
+width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;
+ }
+
+ .eventlink div {
+/*width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;*/
+ }
+
+
+/*.navwrap {
+  text-align: center;
+  margin: 0 auto;
+
+}*/
+
+.clear {
+  clear:both;
+  margin: 0 0;
+}
+
+.navwrap{
+  height: 150%;
+  background-color: black;
+  margin: 0px;
+
+  
+
+}
+
+.navlinks {
+  clear:both;
+}
+
+.navcontent{
+  height: 150%;
+  color: white;
+  font-family: futura;
+  font-size: 25px;
+  padding-top: 20px !important;
+  padding-bottom: 10px;
+  text-align: left;
+
+}
+
+.navcontent a{
+  color: white;
+
+}
+
+
+.nav1{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content{
+  font-family: futura;
+  text-align: center;
+  font-size: 150%;
+  
+  
+}
+
+.content p{
+  line-height: 200%;
+  font-family: futura;
+  text-align: center;
+  font-size: 150%;
+  
+}
+
+#notice{margin: 0px;}
+
+#modal-holder{margin: 0px;}
+
+.slider{
+  margin: 0 0;
+padding: 0 0;}
+
+.slider ul{
+  margin: 0 0;
+padding: 0 0;}
+
+.staravg {
+  margin: 0 auto !important;
+  text-align: center;
+  width: 100px;
+  clear: both;
+}
+
+.avg_score{
+  clear: both;
+}
+
+.hide{
+  display: :none;
+}
+
+.mapheader{
+  width: 100%;
+  border-bottom: solid black 2px;
+  background-color: #DEE7EF;
+  
+}
+
+.title{
+  padding:20px;
+  border-left: solid black 1px;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  background-color: rgb(36, 85, 128);
+  font-family: futura;
+  font-size: 21px;
+  color:white;
+
+
+}

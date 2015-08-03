@@ -7,8 +7,6 @@
 <div class="image_show_top">
   <div class="imagegreyer">
 
-    
-
     <div class="buttonsbox">
     <div class="buttonslider">
       <%= image_tag("arrow.png", size:"25", :alt => "rss feed", :class => "arrow") %>
@@ -23,14 +21,6 @@
           <%= button_to 'Join Tournament', jointournament_group_tournament_path, :class =>"btn btn-primary btn-lg", id: "jointournament",  remote: true, method: :post %>    
           <% end > %>
       </div>
-
-
-
-     
-
-      
-
-     
 
       <div class="createnewevent">
 
@@ -63,15 +53,6 @@
 
   </div>
 
-
-
-
-
-
-
-
-
-
     <div class="image_show_top_text">
       <p>
         <strong>Name:</strong>
@@ -82,16 +63,7 @@
       
       </div>
 
-      <div class="tournamentsbar">
-      
-      
-        <div class="tournamentsbar">
-        <div class="group_members_top"> 
-        <%= render 'tournamentusers' %>
-        </div>
-      </div>
-
-      </div>
+     
 
   </div>
 </div>
@@ -109,6 +81,14 @@
       <!-- <div class="row">           -->
 
         <div class="groupcol2 col-md-10">
+
+        <div class="group_members_top">
+        Tournament Members
+          <div class="membersheader">
+            <%= render 'tournamentusers' %>
+          </div>
+        </div>
+
                   
                  <!-- col1 -->
 
