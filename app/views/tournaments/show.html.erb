@@ -99,78 +99,14 @@
 
 </div>
 
+  
+  
+<div class="container groupcontent">
   <div class="content">
 
   <p id="notice"><%= notice %></p>
-  
-  <div>
-    <h3><%= @tournament.name %> Upcoming Events:</h3>
-    </div>
 
-
-
-  <ul class="eventlist">
-      
-
-      <% if @tournament.events.present? %>
-       <% @tournament.events.each_with_index do | event, index | %>
-      
-          <li> 
-            <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
-              <div>  
-                  Round <%= index + 1 %>: <%= event.name %><br>
-                  <%= image_tag(event.imageurl, :class => "tournament_thumb") %>
-                </div>
-              <div class="avg_score">
-              Score: 
-              <% if event.average.present? %> 
-                <% avg = event.average("Rating").avg %>
-                <%= number_with_precision(avg, precision: 2) %>
-              <% end %>
-              </div>  
-              <div class="timetoevent">
-          
-              <% if event.start_date.present? %>
-                <% daysleft = (event.start_date.to_date - DateTime.now).to_int %>
-
-                <% if daysleft == 0 %>
-        
-                   <%= 'Event is Today!' %>
-                   <% elsif daysleft > 0 %>
-                   Days till Event: <%= daysleft %>
-                   <% elsif daysleft < 0 %>
-                   <%= 'Event has passed' %>
-                   <% else %>
-                   <% 'Event has no date yet.' %>
-                  <% end %>
-              <% end %>
-
-              </div>
-
-              <div class="eventactive">
-              <% ratings = event.rates("Rating").count %>
-              <% users = event.users.count %>
-
-              <% if ratings == users %>
-              Event complete! All users have voted
-              <% else %>
-              Waiting for guests to finish voting
-              <% end %>
-              </div>
-
-              
-
-            <% end %>
-          </li>
-        <% end %> 
-
-      <% else %>
-          There are no events for this tournament yet
-          <% end %>
-    </ul>
-
-<div class="container groupcontent">
-      <div class="row">          
+      <!-- <div class="row">           -->
 
         <div class="groupcol2 col-md-10">
                   
@@ -227,18 +163,18 @@
           <li> <%= link_to('Edit', edit_group_tournament_path(@group, @tournament)) %> </li>
             <li> <%= link_to('Delete', group_tournament_path(@group, @tournament), method: :delete) %></li>
 
-        </div>
+          </div>
 
-        </div>
+       
 
         <div class="col-md-2">
              
           <div class="groupscol1">   
-          <%= render :partial => 'events/otherevents' %> 
+          <%= render 'tournamentsidebar' %> 
           </div>
         
         </div>
-
+       <!-- </div> -->
       </div>
     </div>
 
