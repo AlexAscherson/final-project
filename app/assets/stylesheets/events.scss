@@ -89,58 +89,63 @@
 
 .othereventlist{
  // white-space:nowrap;
+  font-size:15px;
   overflow-x:auto;
   margin-right: 0px;
   background: white;
   font-family: futura;
     li{
-    padding:5px;
+    padding:0px;
     padding-left:0px!important;
     padding-bottom:0px!important;
     padding-right: 0px;
     border: solid black 1px;
     padding-bottom:5px;
     background-color: rgb(214, 241, 236);
+    li:hover ~ #eventtitle {
+    background-color: red!important;
+    color: white;
+    }
+    
+    .eventlititle{background-color: #9CAAC6;line-height: 1.75; padding:0px; 
+
+      }  
+
     & img{
       float: none;
       border-top: solid black 2px;
     }
+    
   }
   
 }
 
- .title{
-    padding:20px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    padding-top:0px;
-    border-top: solid black 2px;
-    font-size: 21px;
-    border-left: solid black 2px;
-    border-bottom: solid black 1px;
-    color: white;
-
-
-  }
-
+ 
+.eventlisttitle{
+  color: #CE0000;background-color: #9CAAC6;
+}
 .eventsidebartop{
-  background: white;
+  background-color: white;
   border: solid black 2px;
   height: 222px;
   border-bottom: 1px;
-  background-color: rgb(214, 241, 236);
+  
 
   h3{
     margin-top: 5px;
     border-bottom: solid black 2px;
-
+    font-size: 21px;
+    line-height: 30px;
+    background-color: #DEE7EF;
+    margin-top: 0px;
   }
+  a{color:#245580;}
   p{border-bottom: solid black 2px;}
   div{margin-left:0px;}
 
 }
 
-.event_thumb{margin-left:0px; margin-right: 0px; width: 100%!important; margin-top:2px; height: 150px;}
+.event_thumb{margin-left:0px; margin-right: 0px; width: 100%!important; padding-top:0px; height: 150px;}
 
 .eventinfo{
   background-color: white;
@@ -178,7 +183,7 @@
 .infoheader{
   width: 100%;
   border-bottom: solid black 2px;
-  background-color: rgb(214, 241, 236);
+  background-color: #DEE7EF;
 }
 
 .slider{border-bottom: solid black 2px;}

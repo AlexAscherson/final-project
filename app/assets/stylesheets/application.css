@@ -17,7 +17,7 @@
 #bodywrap {
   
     display: block;
-    background-color: #d6f1ec;
+    background-color: #9CAAC6;;
     text-align: center;
     margin: 0 auto;
     /*width: 60%;*/
@@ -158,13 +158,19 @@ padding: 0 0;}
 .mapheader{
   width: 100%;
   border-bottom: solid black 2px;
-  background-color: rgb(214, 241, 236);
+  background-color: #DEE7EF;
+  
 }
 
 .title{
   padding:20px;
   border-left: solid black 1px;
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
   background-color: rgb(36, 85, 128);
+  font-family: futura;
+  font-size: 21px;
+  color:white;
 
 
 }

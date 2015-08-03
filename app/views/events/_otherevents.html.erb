@@ -1,10 +1,10 @@
 <div class="eventsidebartop">
 
   
-  <p>
+  <!-- <p>
     <strong>Group:</strong>
     <%= link_to(@group.name, group_path(@group)) %>
-  </p>
+  </p> -->
   <h3><%= link_to(@tournament.name, group_tournament_path(@group, @tournament)) %> Tournament</h3>
   
 
@@ -13,6 +13,7 @@
     Rounds: <%= @tournament.events.count %><br>
     <% stake = @tournament.users.count * @tournament.stake %>
     Prize Pool: £<%=stake%>
+    Pay Stake: 
 
   </div>
 
@@ -29,8 +30,10 @@
     <li> 
       
       <%= link_to group_tournament_event_path(@group, @tournament, event) do %>
-      <div>  
-          Round <%= index + 1 %>: <%= event.name %><br>
+      <div>
+        <div id="eventtitle"class="eventlititle">  
+          Round <%= index + 1 %>: <%= event.name %>
+          </div>
           <%= image_tag(event.imageurl, :class => "event_thumb") %>
         </div>
 
