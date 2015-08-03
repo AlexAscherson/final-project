@@ -1,13 +1,14 @@
 <%= form_tag charges_path do %>
   <article>
-    <label class="amount">
-      <span>Amount: £<%= @tournament.stake %></span>
+    <label class="Stake">
+      <span>Stake: £<%= @tournament.stake %></span>
     </label>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="<% @tournament.stake %>"></script>
+          data-description="Stake for <% @tournament.name %>"
+          data-amount="<% @tournament.stake %>">
+          </script>
 <% end %>
 

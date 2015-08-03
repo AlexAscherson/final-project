@@ -10,10 +10,11 @@
 
   <div class="stakes">
     Stake to enter: £<%= @tournament.stake %><br>
+    <%= render "./charges/newcharge" %>
     Rounds: <%= @tournament.events.count %><br>
     <% stake = @tournament.users.count * @tournament.stake %>
     Prize Pool: £<%=stake%>
-    Pay Stake: 
+    
 
   </div>
 

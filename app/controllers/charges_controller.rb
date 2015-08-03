@@ -9,17 +9,20 @@ def create
   # Amount in cents
   @amount = (@tournament.stake*100)
   user = current_user
-  binding.pry
+  @tournament.users << current_user
+  
 
   customer = Stripe::Customer.create(
-    :email => 'example@stripe.com',
-    :card  => params[:stripeToken]
+    :email => '<% user.email %>',
+    :card  => params[:stripeToken],
+    
+
   )
 
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => 'Rails Stripe customer',
+    :description => 'Stake Payment from <% user.name %> for <% tournament.name %>',
     :currency    => 'gbp'
 
   )
